@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>parmis meshgi — ux designer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #F3EEE4;
+    --paper-2: #EEE7D9;
+    --ink: #1A1815;
+    --ink-2: #3B3630;
+    --muted: #8A8276;
+    --line: #D9D1C1;
+    --accent: oklch(0.64 0.22 28);         /* tomato red */
+    --accent-ink: oklch(0.45 0.18 28);
+    --accent-tint: oklch(0.92 0.06 28);
+
+    --serif: 'Instrument Serif', ui-serif, Georgia, serif;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
+  body {
+    /* subtle paper texture via noise + grid */
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(rgba(26,24,21,0.025) 1px, transparent 1px);
+    background-size: 20px 20px;
+    overflow-x: hidden;
+  }
+  * { box-sizing: border-box; }
+  a { color: inherit; }
+  button { font-family: inherit; }
+
+  /* noise overlay */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    z-index: 1;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  /* custom cursor on desktop only */
+  @media (hover: hover) and (pointer: fine) {
+    body.custom-cursor, body.custom-cursor * { cursor: none !important; }
+  }
+
+  .sticky-dot {
+    position: fixed; left: 0; top: 0;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--accent);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 140ms cubic-bezier(.2,.9,.3,1), height 140ms cubic-bezier(.2,.9,.3,1);
+    mix-blend-mode: multiply;
+  }
+  .sticky-dot.big { width: 56px; height: 56px; }
+  .sticky-dot .label {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 10px; font-weight: 600;
+    color: white; text-transform: uppercase; letter-spacing: 0.06em;
+    opacity: 0; transition: opacity 120ms;
+    white-space: nowrap;
+  }
+  .sticky-dot.big .label { opacity: 1; }
+
+  /* color themes */
+  body[data-theme="tomato"]  { --accent: oklch(0.64 0.22 28);  --accent-ink: oklch(0.45 0.18 28); --accent-tint: oklch(0.92 0.06 28); }
+  body[data-theme="electric"]{ --accent: oklch(0.70 0.23 240); --accent-ink: oklch(0.50 0.18 240); --accent-tint: oklch(0.93 0.05 240); }
+  body[data-theme="lime"]    { --accent: oklch(0.80 0.20 130); --accent-ink: oklch(0.55 0.18 130); --accent-tint: oklch(0.94 0.06 130); }
+  body[data-theme="magenta"] { --accent: oklch(0.65 0.26 340); --accent-ink: oklch(0.45 0.20 340); --accent-tint: oklch(0.93 0.05 340); }
+
+  /* Selection */
+  ::selection { background: var(--accent); color: white; }
+</style>
+</head>
+<body data-theme="tomato">
+  <div id="cursor" class="sticky-dot"><span class="label"></span></div>
+  <div id="app"></div>
+
+  <script>
+    // TWEAK_DEFAULTS live here — the Tweaks panel rewrites this block.
+    window.__TWEAKS__ = /*EDITMODE-BEGIN*/{
+      "theme": "tomato",
+      "splashVariant": "reactive-grid",
+      "projectLayout": "case-files"
+    }/*EDITMODE-END*/;
+  </script>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="src/primitives.jsx"></script>
+  <script type="text/babel" src="src/splash.jsx"></script>
+  <script type="text/babel" src="src/about.jsx"></script>
+  <script type="text/babel" src="src/projects.jsx"></script>
+  <script type="text/babel" src="src/photography.jsx"></script>
+  <script type="text/babel" src="src/misc.jsx"></script>
+  <script type="text/babel" src="src/tweaks.jsx"></script>
+  <script type="text/babel" src="src/app.jsx"></script>
+</body>
+</html>
