@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parmis &amp; Orange</title>
+<style>
+  /* Layout: one column — the film first, then chapters, storyboard and export notes, like a contact sheet. */
+  :root {
+    --paper: #f3eee4; --paper-2: #ebe3d4; --card: #fbf8f1;
+    --ink: #191714; --ink-2: #3b3630; --muted: #6f675b; --line: #d9d1c1;
+    --accent: #e74427; --accent-ink: #b8321a;
+    --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    color-scheme: light;
+  }
+  @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: block; src: url(assets/fonts/InstrumentSerif-Regular.woff2) format('woff2'); }
+  @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: block; src: url(assets/fonts/InstrumentSerif-Italic.woff2) format('woff2'); }
+  @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: block; src: url(assets/fonts/Inter-latin.woff2) format('woff2'); }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 100 800; font-display: block; src: url(assets/fonts/JetBrainsMono-latin.woff2) format('woff2'); }
+
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { background: var(--paper); }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.55 var(--sans);
+    background-image: radial-gradient(rgba(25,23,20,0.05) 1px, transparent 1px); background-size: 20px 20px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-inline: max(16px, 3vw); padding-block: 40px 80px; display: grid; gap: 56px; }
+  .eyebrow { font: 500 12px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+  .eyebrow::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; text-wrap: balance; }
+  h1 { font-size: clamp(44px, 7vw, 84px); line-height: 0.95; }
+  h1 em { color: var(--accent); }
+  h2 { font-size: clamp(32px, 4vw, 44px); line-height: 1; }
+  h3 { font-size: 26px; line-height: 1.1; }
+  header { display: grid; gap: 16px; }
+  header p { margin: 0; max-width: 62ch; color: var(--ink-2); }
+
+  /* player */
+  .player { display: grid; gap: 12px; }
+  .stage { position: relative; width: 100%; aspect-ratio: 16 / 9; max-width: 100%; background: var(--ink); box-shadow: 0 2px 0 var(--line), 0 18px 40px -18px rgba(25,23,20,0.45); overflow: hidden; }
+  .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .cc { position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); max-width: 84%; text-align: center; pointer-events: none;
+    font: 500 clamp(12px, 1.7vw, 20px)/1.35 var(--sans); color: var(--card); background: rgba(25,23,20,0.82); padding: 0.35em 0.8em; }
+  .start { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(25,23,20,0.18); border: 0; cursor: pointer; padding: 0; }
+  .start span { display: inline-flex; align-items: center; gap: 12px; background: var(--card); color: var(--ink); font: 400 clamp(20px, 3vw, 32px)/1 var(--serif); padding: 16px 26px 16px 20px; box-shadow: 3px 5px 0 rgba(25,23,20,0.25); transform: rotate(-1.2deg); }
+  .start span::before { content: ''; width: 0; height: 0; border-left: 16px solid var(--accent); border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+  .start:focus-visible span { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .btn { font: 500 13px/1 var(--mono); letter-spacing: 0.04em; color: var(--ink); background: var(--card); border: 1.5px solid var(--ink); padding: 9px 12px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+  .btn:hover { background: var(--paper-2); }
+  .btn:focus-visible, .scrub:focus-visible, .chapters button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .btn.primary { background: var(--ink); color: var(--card); min-width: 92px; justify-content: center; }
+  .btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--card); }
+  .time { font: 500 13px/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--ink-2); }
+  .spacer { flex: 1 1 auto; }
+  .scrub { position: relative; height: 34px; display: flex; gap: 3px; cursor: pointer; user-select: none; touch-action: none; }
+  .scrub .seg { position: relative; height: 100%; background: var(--paper-2); border-bottom: 2px solid var(--line); overflow: hidden; min-width: 0; }
+  .scrub .seg i { position: absolute; inset: 0 auto 0 0; background: var(--accent); opacity: 0.9; }
+  .scrub .seg b { position: absolute; left: 6px; top: 50%; transform: translateY(-50%); font: 500 11px/1 var(--mono); color: var(--ink-2); mix-blend-mode: multiply; }
+  .note { font-size: 13px; color: var(--muted); margin: 0; }
+
+  /* chapters */
+  .chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; padding: 0; margin: 0; list-style: none; }
+  .chapters button { width: 100%; text-align: left; background: var(--card); border: 1.5px solid var(--line); padding: 12px 14px; cursor: pointer; display: grid; gap: 4px; color: var(--ink); font: inherit; }
+  .chapters button:hover { border-color: var(--ink); }
+  .chapters button.on { border-color: var(--accent); box-shadow: inset 4px 0 0 var(--accent); }
+  .chapters .n { font: 500 11px/1 var(--mono); color: var(--muted); letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+  .chapters .t { font: 400 20px/1.1 var(--serif); }
+
+  /* storyboard */
+  section { display: grid; gap: 20px; }
+  .section-head { display: grid; gap: 10px; }
+  .section-head p { margin: 0; max-width: 64ch; color: var(--ink-2); }
+  .board { display: grid; gap: 16px; }
+  .shot { background: var(--card); border: 1.5px solid var(--line); display: grid; grid-template-columns: 170px minmax(0, 1fr); }
+  .shot .when { border-right: 1.5px dashed var(--line); padding: 18px; display: grid; align-content: start; gap: 10px; }
+  .shot .when .n { font: 400 54px/0.9 var(--serif); color: var(--accent); }
+  .shot .when .tc { font: 500 13px/1.3 var(--mono); font-variant-numeric: tabular-nums; color: var(--ink-2); }
+  .shot .when button { justify-self: start; }
+  .shot .body { padding: 18px 20px; display: grid; gap: 14px; min-width: 0; }
+  .shot dl { margin: 0; display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 8px 16px; }
+  .shot dt { font: 500 11px/1.8 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .shot dd { margin: 0; font-size: 15px; }
+  .shot .vo { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .shot .vo li { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 10px; }
+  .shot .vo time { font: 500 12px/1.9 var(--mono); color: var(--accent-ink); font-variant-numeric: tabular-nums; }
+  .shot .vo q { font-family: var(--serif); font-size: 20px; line-height: 1.3; quotes: '“' '”'; }
+  .shot .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .shot .chips span { font: 500 12px/1 var(--mono); background: var(--paper-2); padding: 6px 8px; }
+
+  .steps { counter-reset: s; list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; max-width: 78ch; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; }
+  .steps li::before { content: counter(s); font: 400 28px/1 var(--serif); color: var(--accent); }
+  code, pre { font-family: var(--mono); font-size: 13px; }
+  pre { background: var(--ink); color: var(--card); padding: 12px 14px; overflow-x: auto; margin: 6px 0 0; }
+  code { background: var(--paper-2); padding: 1px 5px; }
+  pre code { background: none; padding: 0; }
+
+  @media (max-width: 720px) {
+    .shot { grid-template-columns: minmax(0, 1fr); }
+    .shot .when { border-right: 0; border-bottom: 1.5px dashed var(--line); grid-auto-flow: column; justify-content: start; align-items: center; }
+    .shot dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+    .shot dd { margin-bottom: 8px; }
+    .scrub .seg b { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .start span { transform: none; } }
+
+  /* export mode: just the canvas */
+  body.export { background: #000; background-image: none; }
+  body.export .wrap > :not(.player), body.export .bar, body.export .scrub, body.export .note, body.export .cc, body.export .start { display: none !important; }
+  body.export .wrap { padding: 0; max-width: none; }
+  body.export .stage { width: 1920px; height: 1080px; box-shadow: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Portfolio film · 1:30</div>
+    <h1>Parmis &amp; <em>Orange</em></h1>
+    <p>I grew up in my mother’s English school. This is the story of how I went from her student, to a teacher at Orange, to a UX designer who came back to build its website.</p>
+  </header>
+
+  <div class="player">
+    <div class="stage" id="stage">
+      <canvas id="film" width="1920" height="1080" aria-label="Animated film: Parmis and Orange"></canvas>
+      <div class="cc" id="cc" hidden></div>
+      <button class="start" id="start" type="button"><span>Play the film</span></button>
+    </div>
+    <div class="scrub" id="scrub" role="slider" tabindex="0" aria-label="Film position" aria-valuemin="0" aria-valuemax="90" aria-valuenow="0"></div>
+    <div class="bar">
+      <button class="btn primary" id="play" type="button">Play</button>
+      <span class="time" id="time">0:00 / 1:30</span>
+      <span class="spacer"></span>
+      <button class="btn" id="cc-btn" type="button" aria-pressed="true">Captions</button>
+      <button class="btn" id="music-btn" type="button" aria-pressed="true">Music</button>
+      <button class="btn" id="voice-btn" type="button" aria-pressed="false" title="Reads the voiceover with your browser’s built-in voice, to check timing">Scratch voice</button>
+      <button class="btn" id="full-btn" type="button">Fullscreen</button>
+      <button class="btn" id="export-btn" type="button" hidden>Record .webm</button>
+    </div>
+    <p class="note" id="note">Captions show the voiceover script. Record the voiceover in your own voice using the storyboard timings below.</p>
+  </div>
+
+  <section aria-labelledby="ch-h">
+    <div class="section-head"><h2 id="ch-h">Chapters</h2></div>
+    <ol class="chapters" id="chapters"></ol>
+  </section>
+
+  <section aria-labelledby="sb-h">
+    <div class="section-head">
+      <div class="eyebrow">Timed storyboard</div>
+      <h2 id="sb-h">Ten chapters, ninety seconds</h2>
+      <p>Each chapter lists what is on screen, what my paper dress is made of, how things move, how it hands over to the next chapter, the words on screen, and the voiceover with its timing.</p>
+    </div>
+    <div class="board" id="board"></div>
+  </section>
+
+  <section aria-labelledby="ex-h">
+    <div class="section-head">
+      <div class="eyebrow">Export</div>
+      <h2 id="ex-h">Make a video file</h2>
+      <p>The film is drawn frame by frame from code, so it exports cleanly at 1920 × 1080.</p>
+    </div>
+    <ol class="steps">
+      <li><div><strong>MP4, frame-exact (recommended).</strong> From the repository root, with Node 18+ and ffmpeg installed:
+        <pre><code>npm install --no-save playwright
+npx playwright install chromium
+node film/tools/export.mjs</code></pre>
+        This writes <code>film/export/parmis-orange.mp4</code> (1080p, 24 fps, music, soft captions) and <code>parmis-orange.srt</code>. Add <code>--captions</code> to burn the captions into the picture, or <code>--no-music</code> for a silent picture track.</div></li>
+      <li><div><strong>Quick WebM from the browser.</strong> Serve the folder with <code>npx serve film</code>, open the local address, and press <em>Record .webm</em>. It records in real time for 90 seconds, then downloads the file.</div></li>
+      <li><div><strong>Add your voice.</strong> Import the MP4 into any editor (CapCut, iMovie, Premiere, DaVinci Resolve). Import the .srt as a guide track, record each line at its timestamp, and keep the music under the voice. The music already dips during every line.</div></li>
+    </ol>
+  </section>
+</div>
+
+<script src="script.js"></script>
+<script src="js/core.js"></script>
+<script src="js/props.js"></script>
+<script src="js/people.js"></script>
+<script src="js/dress.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/player.js"></script>
+</body>
+</html>
