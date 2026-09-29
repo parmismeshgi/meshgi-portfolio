@@ -2,7 +2,9 @@
 // and clothes are paper. Everyone else is simple paper, kept secondary.
 (() => {
   const P = window.P, C = P.COL, lerp = P.lerp;
-  const HEAD_AR = 651 / 837;
+  // Two photo cut-outs: the childhood portrait (ages 7 and 12) and the current one.
+  // sy = shoulder line as a fraction of the cut-out's height, just under the chin.
+  const HEADS = { adult: { key: 'HEAD', ar: 651 / 837, sy: 0.86 }, child: { key: 'HEAD_CHILD', ar: 477 / 611, sy: 0.9 } };
 
   const rot = (x, y, a) => [x * Math.cos(a) - y * Math.sin(a), x * Math.sin(a) + y * Math.cos(a)];
 
@@ -36,14 +38,15 @@
   // ---------------------------------------------------------------- Parmis
   // o: x, y (feet line), h (height), age (0 = seven, 0.4 = twelve, 1 = adult),
   //    dress (stage name or {from, to, p}), armL/armR ([upper, bend]),
-  //    holdL/holdR(ctx, x, y), tilt, hair {pigtails, pony, pencil, headset},
+  //    holdL/holdR(ctx, x, y), tilt, head ('adult' | 'child'), hair {pencil, headset},
   //    legs (default true), sleeve {fill, tex}
   P.parmis = (ctx, o) => {
     const a = o.age == null ? 1 : o.age;
-    const h = o.h, hf = lerp(0.45, 0.33, a), hh = h * hf, hw = hh * HEAD_AR;
+    const hd = HEADS[o.head || 'adult'];
+    const h = o.h, hf = lerp(0.45, 0.33, a), hh = h * hf, hw = hh * hd.ar;
     const b = P.boil(9001, 0.7);
     const x = o.x + b.x * 0.6, top = o.y - h;
-    const sy = top + hh * 0.86;
+    const sy = top + hh * hd.sy;
     const sw = hh * lerp(0.3, 0.37, a);
     const hemY = o.y - h * lerp(0.19, 0.085, a);
     const hemW = sw * lerp(1.38, 1.5, a);
@@ -67,11 +70,6 @@
     }
 
     // hair behind the head
-    if (hair.pigtails) {
-      [-1, 1].forEach((s, i) => P.piece(ctx, { x: x + s * hw * 0.5, y: top + hh * 0.52, w: hh * 0.2, h: hh * 0.42, rot: s * -0.32, seed: 330 + i, fill: C.hair, kind: 'blob', shadow: 0.6, tex: 'halftone', texColor: '#000', texAlpha: 0.25 }));
-    }
-    if (hair.pony) P.piece(ctx, { x: x + hw * 0.52, y: top + hh * 0.46, w: hh * 0.2, h: hh * 0.5, rot: -0.35, seed: 335, fill: C.hair, kind: 'blob', shadow: 0.6 });
-
     // the dress
     const dressPath = () => {
       ctx.beginPath();
@@ -105,18 +103,16 @@
     out.handR = arm(ctx, x + sw * 0.9, shY, 1, o.armR, ua, fa, aw, sleeve, C.skin, 350);
 
     // the head: her portrait, glued on
-    const neckY = top + hh * 0.9;
+    const neckY = sy + hh * 0.04;
     ctx.save();
     ctx.translate(x, neckY); ctx.rotate((o.tilt || 0) + b.r * 0.6); ctx.translate(-x, -neckY);
     ctx.shadowColor = 'rgba(25,23,20,0.3)'; ctx.shadowBlur = 10; ctx.shadowOffsetX = 2; ctx.shadowOffsetY = 5;
-    if (P.HEAD) ctx.drawImage(P.HEAD, x - hw / 2, top, hw, hh);
+    if (P[hd.key]) ctx.drawImage(P[hd.key], x - hw / 2, top, hw, hh);
     ctx.shadowColor = 'transparent';
     // collar strip covers the torn neck
     P.piece(ctx, { x, y: sy + hh * 0.045, w: hh * 0.34, h: hh * 0.07, seed: 360, fill: st.collar || C.cream, kind: 'torn', boil: 0.3, shadow: 0.5 });
 
     // hair accessories in front
-    if (hair.pigtails) [-1, 1].forEach((s, i) => bow(ctx, x + s * hw * 0.42, top + hh * 0.33, hh * 0.1, 370 + i));
-    if (hair.pony) P.piece(ctx, { x: x + hw * 0.34, y: top + hh * 0.2, w: hh * 0.11, h: hh * 0.045, rot: -0.5, seed: 380, fill: C.orange, shadow: 0.5 });
     if (hair.pencil) {
       P.piece(ctx, { x: x + hw * 0.4, y: top + hh * 0.36, w: hh * 0.035, h: hh * 0.3, rot: 0.55, seed: 385, fill: C.mustard, shadow: 0.5,
         draw: (g, w2, h2) => { g.fillStyle = C.pink; g.fillRect(-w2 / 2, -h2 / 2, w2, h2 * 0.14); g.fillStyle = C.tan; g.fillRect(-w2 / 2, h2 / 2 - h2 * 0.14, w2, h2 * 0.14); } });
@@ -129,17 +125,6 @@
     ctx.restore();
     return out;
   };
-
-  function bow(ctx, x, y, s, seed) {
-    const b = P.boil(seed, 0.6);
-    ctx.save(); ctx.translate(x + b.x, y + b.y); ctx.rotate(b.r * 3);
-    ctx.shadowColor = 'rgba(25,23,20,0.25)'; ctx.shadowBlur = 5; ctx.shadowOffsetY = 2;
-    ctx.fillStyle = C.orange;
-    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-s, -s * 0.6); ctx.lineTo(-s * 0.9, s * 0.6); ctx.closePath(); ctx.fill();
-    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(s, -s * 0.6); ctx.lineTo(s * 0.9, s * 0.6); ctx.closePath(); ctx.fill();
-    ctx.fillStyle = C.orange2; ctx.beginPath(); ctx.arc(0, 0, s * 0.28, 0, 7); ctx.fill();
-    ctx.restore();
-  }
 
   function headset(ctx, x, top, hw, hh, v) {
     if (v <= 0) return;

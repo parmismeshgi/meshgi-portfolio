@@ -23,10 +23,8 @@
   };
 
   const ready = (async () => {
-    const head = new Image();
-    head.src = 'assets/parmis-head.webp';
-    await head.decode();
-    P.HEAD = head;
+    const load = async (src) => { const im = new Image(); im.src = src; await im.decode(); return im; };
+    [P.HEAD, P.HEAD_CHILD] = await Promise.all([load('assets/parmis-head.webp'), load('assets/parmis-child-head.webp')]);
     await Promise.all([
       document.fonts.load(`400 40px 'Instrument Serif'`), document.fonts.load(`italic 400 40px 'Instrument Serif'`),
       document.fonts.load(`500 20px 'Inter'`), document.fonts.load(`600 20px 'Inter'`), document.fonts.load(`500 20px 'JetBrains Mono'`),

@@ -19,7 +19,7 @@ Generated from `film/script.js` by `node film/tools/storyboard-md.mjs`.
 ## 1. A child learning English (0:00.0–0:09.0, 9 s)
 
 - **Image:** Blank paper. The small orange shape drops in and stamps the title, then hops into a notebook. The classroom is built in paper pieces around me, age seven, perched on a stool in the middle with my notebook. My mother stands at the board — seen from a child’s height, so only her cardigan, her arm and the chalk are in frame. Classmates sit at desks either side.
-- **Dress:** Children’s book pages, bright magazine scraps, crayon drawings, small alphabet tiles. Paper pigtails with orange bows.
+- **Dress:** Children’s book pages, bright magazine scraps, crayon drawings, small alphabet tiles. My face is cut from my own childhood photo, flowers in my hair.
 - **Movement:** Chalk letters appear stroke by stroke. Alphabet tiles lift off the board and flutter onto my notebook and dress. The orange shape lands on the notebook page as a doodle.
 - **Transition:** I lift the notebook over my head. Its page opens and unfolds into the hand-cut “Orange” sign.
 - **On screen:** “Parmis & Orange” · “age 7 · my mother’s English class” · “Board: A a  B b  C c”
@@ -30,7 +30,7 @@ Generated from `film/script.js` by `node film/tools/storyboard-md.mjs`.
 ## 2. Orange begins (0:09.0–0:17.0, 8 s)
 
 - **Image:** The classroom falls away and a paper school front builds itself. I am twelve, a little taller, in front of the door. My mother’s hands reach in from above the frame to hang the sign. A paper-doll chain in the window stands for family.
-- **Dress:** Classroom posters, lesson sheets and orange paper pasted over the book pages. Ponytail with an orange clip.
+- **Dress:** Classroom posters, lesson sheets and orange paper pasted over the book pages. Still my childhood photo, a little taller; my grown-up face arrives in chapter 3.
 - **Movement:** The sign unfolds in three stop-motion steps. Hands hang it, then leave. Posters pin themselves to the walls. New patches paste over my dress one by one.
 - **Transition:** A lesson sheet peels off the wall, spins towards the camera and becomes the whiteboard behind me.
 - **On screen:** “Orange · Language Institute” · “age 12 · my mother opens Orange” · “My mother’s school. Our family’s story.”

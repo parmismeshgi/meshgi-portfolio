@@ -88,7 +88,7 @@
     ctx.restore();
     const pr = P.parmis(ctx, {
       x: 960, y: 1030, h: g.h, age: g.age,
-      dress: 'kidbook', hair: { pigtails: t < 9.5 },
+      dress: 'kidbook', head: 'child',
       armL: lift > 0 ? [lerp(0.3, 2.6, steps(lift, 6)), lerp(1.3, 0.3, steps(lift, 6))] : [0.3, 1.3],
       armR: lift > 0 ? [lerp(0.3, 2.6, steps(lift, 6)), lerp(1.3, 0.3, steps(lift, 6))] : writing ? [0.3 + wave(t, 5, 0.06), 1.35] : [0.3, 1.3],
       tilt: writing ? 0.04 : 0,
@@ -234,7 +234,7 @@
     P.parmis(ctx, {
       x: 960, y: 1030, h: g.h, age: g.age,
       dress: P.dressAt(t, 'kidbook', t < 16.4 ? 'orange' : 'teacher', t < 16.4 ? 11.4 : 16.4, t < 16.4 ? 12.4 : 17.4),
-      hair: { pigtails: t < 9.5, pony: t >= 9.5 && t < 16.6, pencil: t >= 16.6 },
+      head: t < 16.45 ? 'child' : 'adult', hair: { pencil: t >= 16.6 },
       armL: t < 9.6 ? [lerp(2.6, 0.3, steps(seg(t, 9.0, 9.6), 3)), 0.3] : cheer ? [2.5 + wave(t, 2, 0.12), 0.3] : [0.25, 0.1],
       armR: t < 9.6 ? [lerp(2.6, 0.3, steps(seg(t, 9.0, 9.6), 3)), 0.3] : [0.35, 1.2],
       holdR: t >= 13.6 && t < 16.2 ? (c, x, y) => P.piece(c, { x: x + 10, y: y - 30, w: 90, h: 120, seed: 140, fill: C.cream, tex: 'ruled', texColor: C.sky, texAlpha: 0.6, rot: 0.1, scale: pop(t, 13.6), draw: (gg) => P.text(gg, 'my notes', 0, -36, { f: 'mono', size: 11, color: C.orange }) }) : null,
