@@ -9,19 +9,6 @@
   const tc = (s) => { const d = Math.round(s * 10); return `${Math.floor(d / 600)}:${String(Math.floor(d / 10) % 60).padStart(2, '0')}.${d % 10}`; };
   const voAt = (t) => F.vo.find(([a, b]) => t >= a && t < b);
 
-  // captions burned into the picture (export --captions)
-  P.afterRender = (g, t) => {
-    if (!P.burnCaptions) return;
-    const line = voAt(t);
-    if (!line) return;
-    g.save();
-    g.font = `500 34px ${P.FONT.sans}`;
-    const w = g.measureText(line[2]).width + 44;
-    g.fillStyle = 'rgba(25,23,20,0.84)'; g.fillRect(960 - w / 2, 1080 - 118, w, 58);
-    g.fillStyle = P.COL.cream; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(line[2], 960, 1080 - 88);
-    g.restore();
-  };
-
   const ready = (async () => {
     const load = async (src) => { const im = new Image(); im.src = src; await im.decode(); return im; };
     [P.HEAD, P.HEAD_CHILD, P.HEAD_20] = await Promise.all(['parmis-head', 'parmis-child-head', 'parmis-20-head'].map((n) => load(`assets/${n}.webp`)));
@@ -34,9 +21,9 @@
   // ---------- export mode: the Node exporter drives these ----------
   if (EXPORT) {
     document.body.classList.add('export');
-    P.burnCaptions = params.has('captions');
+    P.showCaptions = !params.has('clean');
     window.filmReady = ready;
-    window.renderAt = (t) => { P.render(ctx, t); if (P.afterRender) P.afterRender(ctx, P.T); };
+    window.renderAt = (t) => P.render(ctx, t);
     window.frameJpeg = (t, q = 0.93) => { window.renderAt(t); return canvas.toDataURL('image/jpeg', q); };
     window.renderAudio = () => P.renderAudioWav(48000);
     return;
@@ -141,7 +128,8 @@
     b.setAttribute('aria-pressed', String(opts[key]));
     b.addEventListener('click', () => { opts[key] = !opts[key]; b.setAttribute('aria-pressed', String(opts[key])); saveOpts(); if (after) after(); });
   };
-  toggle('cc-btn', 'cc', () => { lastFr = -1; });
+  P.showCaptions = opts.cc;
+  toggle('cc-btn', 'cc', () => { P.showCaptions = opts.cc; lastFr = -1; if (poster) P.render(ctx, 5.6); });
   toggle('music-btn', 'music', () => { if (playing) { const keep = t; pause(); t = keep; play(); } });
   toggle('voice-btn', 'voice', () => { if (!opts.voice && window.speechSynthesis) speechSynthesis.cancel(); });
   if (!window.speechSynthesis) $('voice-btn').hidden = true;
@@ -175,13 +163,12 @@
       a.download = 'parmis-orange.webm'; a.click();
       $('note').textContent = 'Recording saved as parmis-orange.webm.';
     };
-    P.burnCaptions = opts.cc;
     $('note').textContent = 'Recording… keep this tab in front for 90 seconds.';
     rec.start(1000);
     nodes = opts.music ? P.scheduleAudio(ac, dest, 0, ac.currentTime + 0.05) : [];
     if (opts.music) P.scheduleAudio(ac, ac.destination, 0, ac.currentTime + 0.05).forEach((n) => nodes.push(n));
     playing = true; t0 = 0; clock0 = now() + 0.05; $('start').hidden = true; $('play').textContent = 'Pause';
-    const stopWhenDone = () => { if (t >= F.duration - 0.02 || !playing) { rec.stop(); P.burnCaptions = false; } else requestAnimationFrame(stopWhenDone); };
+    const stopWhenDone = () => { if (t >= F.duration - 0.02 || !playing) { rec.stop(); } else requestAnimationFrame(stopWhenDone); };
     requestAnimationFrame(stopWhenDone);
   });
 
@@ -190,13 +177,7 @@
     if (!poster && fr !== lastFr) {
       lastFr = fr;
       P.render(ctx, t);
-      if (P.afterRender) P.afterRender(ctx, P.T);
     }
-    const line = voAt(t);
-    const cc = $('cc');
-    const show = opts.cc && line && !P.burnCaptions;
-    cc.hidden = !show;
-    if (show && cc.textContent !== line[2]) cc.textContent = line[2];
     $('time').textContent = `${fmt(t)} / ${fmt(F.duration)}`;
     scrub.setAttribute('aria-valuenow', String(Math.round(t)));
     scrub.setAttribute('aria-valuetext', fmt(t));

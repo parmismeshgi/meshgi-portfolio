@@ -9,7 +9,6 @@
     return [lerp(a[0], b[0], e), lerp(a[1], b[1], e) - Math.sin(p * Math.PI) * hgt, p];
   };
   const wave = (t, speed = 2, amp = 0.3) => Math.sin(Math.floor(t * 6) * speed) * amp; // stop-motion wave
-  const chapter = (ctx, n) => P.text(ctx, String(n).padStart(2, '0') + ' / 10', W - 70, 62, { f: 'mono', size: 16, align: 'right', color: C.muted, ls: 2 });
   // Parmis's height and age over the whole film, stepped like stop-motion
   const growth = (t) => {
     if (t < 8.9) return { h: 470, age: 0 };
@@ -110,8 +109,6 @@
         P.alphaTile(ctx, ch, x, y, lerp(1, 0.5, p), col, 60 + i, p * 3);
       });
     }
-    chapter(ctx, 1);
-    P.label(ctx, 'age 7 · my mother’s English class', 70, 70, t, 2.4, 8.4);
     return { nb: nbPos, lift };
   }
 
@@ -243,9 +240,6 @@
 
     // flying lesson sheet (transition into chapter 3)
     if (t > 16.0) flyingSheet(ctx, t);
-    chapter(ctx, 2);
-    P.label(ctx, 'age 12 · my mother opens Orange', 70, 70, t, 9.8, 16.2);
-    P.caption(ctx, ['My mother’s school.', 'Our family’s story.'], 90, 225, t, 12.8, 16.2, { size: 44 });
   }
 
   const BOARD = { x: 960, y: 330, w: 1080, h: 420 };
@@ -336,9 +330,6 @@
     else if (t < 25.0) { const [x, y] = arcHop(t, 24.4, 25.0, [1080, 150], [1400, 880], 160); P.orange(ctx, x, y, 0.8); }
     else P.orange(ctx, lerp(1400, 1180, cubeT), lerp(880, 772, cubeT), 0.8);
 
-    chapter(ctx, 3);
-    P.label(ctx, 'university years · teaching at Orange', 70, 70, t, 17.3, 25.5);
-    P.caption(ctx, ['Watching how they learn.'], 70, 1000, t, 22.2, 25.6, { size: 44 });
   }
 
   // ======================================== 4. Montessori, then phonics
@@ -445,9 +436,6 @@
       else if (t < 26.8) { const [x, y] = arcHop(t, 26.3, 26.8, [700, 784], [840, 866], 80); P.orange(ctx, x, y, 0.8); }
       else P.orange(ctx, 840, 866, 0.8);
     }
-    chapter(ctx, 4);
-    P.label(ctx, 'training · Montessori', 70, 70, t, 26.4, 31.8);
-    P.label(ctx, 'training · phonics', 70, 70, t, 32.0, 35.4);
   }
   // chapter-3 backdrop frozen, for the paste-over
   function sceneTeacherStatic(ctx, t) {
@@ -555,9 +543,6 @@
     // the orange shape hops up and becomes the ball on the slide
     if (t < 36.3) { const [x, y] = arcHop(t, 35.2, 36.3, [840, 866], [ct.x + ct.w - 140, ct.y + 118], 220); P.orange(ctx, x, y, lerp(0.8, 1.1, seg(t, 35.2, 36.3))); }
     else P.orange(ctx, ct.x + ct.w - 140, ct.y + 118, 1.1);
-    chapter(ctx, 5);
-    P.label(ctx, 'COVID · teaching online', 70, 70, t, 36.5, 44.8);
-    P.caption(ctx, ['Keeping little learners close.'], 90, 1006, t, 39.4, 44.9, { size: 42 });
   }
   function c2(ctx, x, y, v, k) { ctx.save(); ctx.translate(x, y); P.pic.note(ctx, 1.6 * v, k % 2 ? C.orange : C.ink); ctx.restore(); }
   function sockPuppet(ctx, x, y, t) {
@@ -663,9 +648,6 @@
     const os = lerp(1.1 * lerp(1, 2, grow), 2.2, ob) * lerp(1, 0.5, steps(seg(t, 52.0, 52.8), 4));
     P.orange(ctx, lerp(ball[0], 960, E.inOut(ob)), lerp(ball[1], 150, E.inOut(ob)), os);
     if (ob >= 1 && t < 52) { ctx.fillStyle = C.cream; ctx.beginPath(); ctx.moveTo(950, 132); ctx.lineTo(950, 168); ctx.lineTo(978, 150); ctx.fill(); }
-    chapter(ctx, 6);
-    P.label(ctx, 'the design question', 70, 70, t, 45.4, 52.8);
-    P.caption(ctx, ['What if the screen', 'were built for them?'], 90, 930, t, 48.8, 52.8, { size: 42 });
   }
 
   // =============================================== 7. Canada, BrainStation
@@ -776,10 +758,6 @@
     // the orange shape: the sun outside, then a pin on the wall
     if (toWall < 0.5) P.orange(ctx, lerp(960, WIN.x + 90, morph), lerp(150, WIN.y - 130, morph), lerp(1.1, 1.3, morph));
     else P.orange(ctx, 150, 626, 0.7);
-    chapter(ctx, 7);
-    P.label(ctx, 'Canada', 70, 70, t, 53.4, 56.3);
-    P.label(ctx, 'BrainStation · capstone', 70, 70, t, 56.5, 62.8);
-    P.caption(ctx, ['A teaching platform', 'for young children.'], 90, 900, t, 57.2, 62.9, { size: 42 });
   }
 
   // ======================================================= 8. Volante
@@ -847,9 +825,6 @@
     else { const along = steps(seg(t, 69.2, 70.2), 6); P.orange(ctx, lerp(1780, 960, along), lerp(THREAD_Y(1780), 330, along), lerp(0.55, 1, along)); }
     // the thread tugs a browser window in
     if (pull > 0) P.browser(ctx, lerp(2300, 1525, pull), 500, 610, 660, 1, 1001, { url: 'orange / team' }, null);
-    chapter(ctx, 8);
-    P.label(ctx, 'Volante · UX designer', 70, 70, t, 63.5, 69.6);
-    P.caption(ctx, ['Designing for equal access.'], 90, 1010, t, 66.8, 69.8, { size: 42 });
   }
 
   // ================================================= 9. back to Orange
@@ -953,8 +928,6 @@
       if (t < 71.0) { const [x, y] = arcHop(t, 70.2, 71.0, [960, 330], [lx, ly], 160); P.orange(ctx, x, y, lerp(1, 0.42, seg(t, 70.2, 71.0))); }
       else { const [x, y] = toHands > 0 ? arcHop(t, 80.4, 81.2, [lx, ly], [hx, hy], 200) : [lx, ly]; P.orange(ctx, x, y, lerp(0.42, 1.1, toHands)); }
     }
-    chapter(ctx, 9);
-    P.label(ctx, 'years later · back to Orange', 70, 70, t, 70.4, 80.8);
     [['public site', PUB.x - PUB.w / 2, 125, 72.6], ['team site', TEAM.x - TEAM.w / 2, 125, 78.0]].forEach(([s, x, y, t0]) => { const v = vis(t, t0, 80.9); if (v) P.text(ctx, '↓ ' + s.toUpperCase(), x + 8, y + 18, { f: 'mono', size: 15, align: 'left', color: C.muted, ls: 2, alpha: v > 0.9 ? 1 : v }); });
   }
 
@@ -1034,7 +1007,6 @@
       P.piece(ctx, { x: 960, y: 90, w, h: 96, seed: 1210, fill: C.ink, scale: nv, rot: -0.01, shadow: 1.4, draw: () => P.text(ctx, 'Parmis Meshgi', 0, 3, { f: 'serif', size: 66, color: C.cream }) });
       if (t > 88.4) P.text(ctx, 'UX DESIGNER · PORTFOLIO FILM', 960, 170, { f: 'mono', size: 15, ls: 3, color: C.ink2 });
     }
-    chapter(ctx, 10);
   }
 
   // ============================================================ timeline
@@ -1053,9 +1025,49 @@
     // the orange shape in chapters 1–2 (other chapters place it themselves)
     if (t < 9.6) orangeEarly(ctx, t);
     else if (t < 17) orangeMid(ctx, t);
+    timeline(ctx, t);
+    if (P.showCaptions !== false) storyLine(ctx, t);
     P.finish(ctx);
     ctx.restore();
   };
+
+  // The life timeline across the top: where we are, and what came before
+  function timeline(ctx, t) {
+    const v = pop(t, 2.3);
+    if (!v) return;
+    const S = window.FILM.scenes, x0 = 120, x1 = W - 120, y = 38;
+    const cur = S.findIndex((s) => t >= s.start && t < s.end);
+    ctx.save();
+    ctx.globalAlpha = Math.min(1, v);
+    ctx.translate(0, (1 - Math.min(1, v)) * -40);
+    P.piece(ctx, { x: W / 2, y: y + 4, w: W - 60, h: 72, seed: 1500, fill: C.cream, kind: 'torn', shadow: 1, boil: 0.25 });
+    const step = (x1 - x0) / (S.length - 1);
+    ctx.strokeStyle = C.line; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(x0, y - 10); ctx.lineTo(x1, y - 10); ctx.stroke();
+    // progress runs along the line in steps
+    const prog = cur < 0 ? S.length - 1 : cur + P.steps(seg(t, S[cur].start, S[cur].end), 6);
+    ctx.strokeStyle = C.orange; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(x0, y - 10); ctx.lineTo(x0 + Math.min(prog, S.length - 1) * step, y - 10); ctx.stroke();
+    S.forEach((s, i) => {
+      const x = x0 + i * step, on = i === cur, past = i < cur;
+      ctx.fillStyle = on ? C.orange : past ? C.ink : C.cream;
+      ctx.strokeStyle = on ? C.orange : past ? C.ink : C.muted; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(x, y - 10, on ? 10 : 6.5, 0, 7); ctx.fill(); ctx.stroke();
+      P.text(ctx, s.stage.toUpperCase(), x, y + 17, { f: 'mono', size: on ? 19 : 16, weight: on ? 600 : 500, ls: 1, color: on ? C.ink : past ? C.ink2 : C.muted });
+    });
+    ctx.restore();
+  }
+
+  // The story, written into the picture so the film reads without sound
+  function storyLine(ctx, t) {
+    const line = window.FILM.vo.find(([a, b]) => t >= a - 0.1 && t < b + 0.25);
+    if (!line || line[0] >= 84.9) return; // the closing card says the last line itself
+    const v = P.vis(t, line[0] - 0.1, line[1] + 0.25);
+    if (!v) return;
+    const s = line[2], size = 40;
+    const w = P.measure(ctx, s, { f: 'serif', size }) + 96;
+    P.piece(ctx, { x: W / 2, y: H - 62, w, h: size + 30, kind: 'torn', seed: 1600 + Math.round(line[0] * 10), fill: C.cream, scale: v, shadow: 1.3, boil: 0.3,
+      draw: () => { ctx.fillStyle = C.orange; ctx.beginPath(); ctx.arc(-w / 2 + 30, 1, 6.5, 0, 7); ctx.fill(); P.text(ctx, s, 14, 2, { f: 'serif', size, color: C.ink }); } });
+  }
 
   function orangeEarly(ctx, t) {
     // drops in, bounces on the title, hops into the notebook, becomes paper

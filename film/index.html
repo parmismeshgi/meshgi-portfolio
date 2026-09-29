@@ -42,8 +42,6 @@
   .player { display: grid; gap: 12px; }
   .stage { position: relative; width: 100%; aspect-ratio: 16 / 9; max-width: 100%; background: var(--ink); box-shadow: 0 2px 0 var(--line), 0 18px 40px -18px rgba(25,23,20,0.45); overflow: hidden; }
   .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-  .cc { position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); max-width: 84%; text-align: center; pointer-events: none;
-    font: 500 clamp(12px, 1.7vw, 20px)/1.35 var(--sans); color: var(--card); background: rgba(25,23,20,0.82); padding: 0.35em 0.8em; }
   .start { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(25,23,20,0.18); border: 0; cursor: pointer; padding: 0; }
   .start span { display: inline-flex; align-items: center; gap: 12px; background: var(--card); color: var(--ink); font: 400 clamp(20px, 3vw, 32px)/1 var(--serif); padding: 16px 26px 16px 20px; box-shadow: 3px 5px 0 rgba(25,23,20,0.25); transform: rotate(-1.2deg); }
   .start span::before { content: ''; width: 0; height: 0; border-left: 16px solid var(--accent); border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
@@ -111,7 +109,7 @@
 
   /* export mode: just the canvas */
   body.export { background: #000; background-image: none; }
-  body.export .wrap > :not(.player), body.export .bar, body.export .scrub, body.export .note, body.export .cc, body.export .start { display: none !important; }
+  body.export .wrap > :not(.player), body.export .bar, body.export .scrub, body.export .note, body.export .start { display: none !important; }
   body.export .wrap { padding: 0; max-width: none; }
   body.export .stage { width: 1920px; height: 1080px; box-shadow: none; }
 </style>
@@ -127,7 +125,6 @@
   <div class="player">
     <div class="stage" id="stage">
       <canvas id="film" width="1920" height="1080" aria-label="Animated film: Parmis and Orange"></canvas>
-      <div class="cc" id="cc" hidden></div>
       <button class="start" id="start" type="button"><span>Play the film</span></button>
     </div>
     <div class="scrub" id="scrub" role="slider" tabindex="0" aria-label="Film position" aria-valuemin="0" aria-valuemax="90" aria-valuenow="0"></div>
@@ -135,13 +132,13 @@
       <button class="btn primary" id="play" type="button">Play</button>
       <span class="time" id="time">0:00 / 1:30</span>
       <span class="spacer"></span>
-      <button class="btn" id="cc-btn" type="button" aria-pressed="true">Captions</button>
+      <button class="btn" id="cc-btn" type="button" aria-pressed="true">Story lines</button>
       <button class="btn" id="music-btn" type="button" aria-pressed="true">Music</button>
       <button class="btn" id="voice-btn" type="button" aria-pressed="false" title="Reads the voiceover with your browser’s built-in voice, to check timing">Scratch voice</button>
       <button class="btn" id="full-btn" type="button">Fullscreen</button>
       <button class="btn" id="export-btn" type="button" hidden>Record .webm</button>
     </div>
-    <p class="note" id="note">Captions show the voiceover script. Record the voiceover in your own voice using the storyboard timings below.</p>
+    <p class="note" id="note">The story lines are drawn into the film so it makes sense without sound. They are also the voiceover script: turn them off when you record your own voice.</p>
   </div>
 
   <section aria-labelledby="ch-h">
@@ -169,7 +166,7 @@
         <pre><code>npm install --no-save playwright
 npx playwright install chromium
 node film/tools/export.mjs</code></pre>
-        This writes <code>film/export/parmis-orange.mp4</code> (1080p, 24 fps, music, soft captions) and <code>parmis-orange.srt</code>. Add <code>--captions</code> to burn the captions into the picture, or <code>--no-music</code> for a silent picture track.</div></li>
+        This writes <code>film/export/parmis-orange.mp4</code> (1080p, 24 fps, music, story lines in the picture) and <code>parmis-orange.srt</code>. Add <code>--clean</code> for a version without the story lines, to put under your recorded voice, or <code>--no-music</code> for a silent picture track.</div></li>
       <li><div><strong>Quick WebM from the browser.</strong> Serve the folder with <code>npx serve film</code>, open the local address, and press <em>Record .webm</em>. It records in real time for 90 seconds, then downloads the file.</div></li>
       <li><div><strong>Add your voice.</strong> Import the MP4 into any editor (CapCut, iMovie, Premiere, DaVinci Resolve). Import the .srt as a guide track, record each line at its timestamp, and keep the music under the voice. The music already dips during every line.</div></li>
     </ol>

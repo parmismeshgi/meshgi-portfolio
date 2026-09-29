@@ -1,7 +1,7 @@
 // Export the film to MP4, frame by frame.
 //
 //   node film/tools/export.mjs [--out film/export/parmis-orange.mp4]
-//        [--captions] [--no-music] [--from 0] [--to 90] [--stills 5,20.5]
+//        [--clean] [--no-music] [--from 0] [--to 90] [--stills 5,20.5]
 //
 // Needs Playwright (npm install --no-save playwright && npx playwright install chromium)
 // and ffmpeg on PATH (or FFMPEG=/path/to/ffmpeg). Frames are rendered at the
@@ -38,7 +38,7 @@ const server = http.createServer((req, res) => {
   fs.createReadStream(p).pipe(res);
 });
 await new Promise((r) => server.listen(0, '127.0.0.1', r));
-const base = `http://127.0.0.1:${server.address().port}/index.html?export${flag('--captions') ? '&captions' : ''}`;
+const base = `http://127.0.0.1:${server.address().port}/index.html?export${flag('--clean') ? '&clean' : ''}`;
 
 const { chromium } = loadPlaywright();
 const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
