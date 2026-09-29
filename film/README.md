@@ -6,7 +6,7 @@ chapters, toggle captions and music, and read the timed storyboard.
 
 - `script.js`: timings, storyboard and voiceover, the single source for everything
 - `js/`: the canvas renderer (`core`, `props`, `people`, `dress`, `scenes`), music (`audio`) and player
-- `assets/parmis-head.webp`: the collage cut-out of the reference portrait (`tools/make_cutout.py`)
+- `assets/parmis-*-head.webp`: collage cut-outs of three portraits: childhood, age 20 and today (`tools/make_photo_cutouts.py`, `tools/make_cutout.py`)
 - `STORYBOARD.md`: generated with `node film/tools/storyboard-md.mjs`
 
 ## Export

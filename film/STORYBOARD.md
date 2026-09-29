@@ -30,7 +30,7 @@ Generated from `film/script.js` by `node film/tools/storyboard-md.mjs`.
 ## 2. Orange begins (0:09.0–0:17.0, 8 s)
 
 - **Image:** The classroom falls away and a paper school front builds itself. I am twelve, a little taller, in front of the door. My mother’s hands reach in from above the frame to hang the sign. A paper-doll chain in the window stands for family.
-- **Dress:** Classroom posters, lesson sheets and orange paper pasted over the book pages. Still my childhood photo, a little taller; my grown-up face arrives in chapter 3.
+- **Dress:** Classroom posters, lesson sheets and orange paper pasted over the book pages. Still my childhood photo, a little taller; my face at twenty arrives in chapter 3.
 - **Movement:** The sign unfolds in three stop-motion steps. Hands hang it, then leave. Posters pin themselves to the walls. New patches paste over my dress one by one.
 - **Transition:** A lesson sheet peels off the wall, spins towards the camera and becomes the whiteboard behind me.
 - **On screen:** “Orange · Language Institute” · “age 12 · my mother opens Orange” · “My mother’s school. Our family’s story.”
@@ -41,7 +41,7 @@ Generated from `film/script.js` by `node film/tools/storyboard-md.mjs`.
 ## 3. Teaching at Orange, at university (0:17.0–0:26.0, 9 s)
 
 - **Image:** An Orange classroom. I stand at the whiteboard as a university student and teacher. Four children of about ten sit at desks on both sides.
-- **Dress:** Classroom notes, sticky notes, worksheets with ticks and stars. A pencil tucked behind my ear.
+- **Dress:** Classroom notes, sticky notes, worksheets with ticks and stars. A pencil tucked behind my ear. My face is from a photo of me at twenty.
 - **Movement:** I hold up a picture card. Hands shoot up; speech bubbles pop. A paper magnifier sweeps across the class, and above each child a small bubble shows how they learn: pictures, sounds, hands, talk.
 - **Transition:** A child’s worksheet folds, step by step, into a paper cube that drops to the floor.
 - **On screen:** “university years · teaching at Orange” · “Hello, class!” · “Watching how they learn.”
@@ -63,7 +63,7 @@ Generated from `film/script.js` by `node film/tools/storyboard-md.mjs`.
 
 ## 5. Teaching during COVID (0:36.0–0:45.0, 9 s)
 
-- **Image:** Inside the monitor: a video-call grid. I am in the middle tile with a headset. Six children in paper webcam frames wave, clap, hold up cards and raise their hands.
+- **Image:** Inside the monitor: a video-call grid. I am in the middle tile with a headset. From here on my face is from my current portrait. Six children in paper webcam frames wave, clap, hold up cards and raise their hands.
 - **Dress:** Phonics cards, lesson slides, webcam frames and little paper windows.
 - **Movement:** I flip phonics cards, sing (paper notes rise), and a sock puppet says hi. Each child answers in their own way; one holds up a card to match mine.
 - **Transition:** The lesson slide swells to fill the screen.

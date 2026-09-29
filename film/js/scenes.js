@@ -234,7 +234,7 @@
     P.parmis(ctx, {
       x: 960, y: 1030, h: g.h, age: g.age,
       dress: P.dressAt(t, 'kidbook', t < 16.4 ? 'orange' : 'teacher', t < 16.4 ? 11.4 : 16.4, t < 16.4 ? 12.4 : 17.4),
-      head: t < 16.45 ? 'child' : 'adult', hair: { pencil: t >= 16.6 },
+      head: t < 16.45 ? 'child' : 'twenty', hair: { pencil: t >= 16.6 },
       armL: t < 9.6 ? [lerp(2.6, 0.3, steps(seg(t, 9.0, 9.6), 3)), 0.3] : cheer ? [2.5 + wave(t, 2, 0.12), 0.3] : [0.25, 0.1],
       armR: t < 9.6 ? [lerp(2.6, 0.3, steps(seg(t, 9.0, 9.6), 3)), 0.3] : [0.35, 1.2],
       holdR: t >= 13.6 && t < 16.2 ? (c, x, y) => P.piece(c, { x: x + 10, y: y - 30, w: 90, h: 120, seed: 140, fill: C.cream, tex: 'ruled', texColor: C.sky, texAlpha: 0.6, rot: 0.1, scale: pop(t, 13.6), draw: (gg) => P.text(gg, 'my notes', 0, -36, { f: 'mono', size: 11, color: C.orange }) }) : null,
@@ -308,7 +308,7 @@
     const lens = sweep > 0 && sweep < 1;
     const lensX = lerp(KIDS10[0].x, KIDS10[3].x, steps(sweep, 4) * 1.33 > 1 ? 1 : steps(sweep, 4) * 1.33);
     const pr = P.parmis(ctx, {
-      x: 960, y: 1030, h: g.h, age: g.age, dress: P.dressAt(t, 'orange', 'teacher', 16.4, 17.4), hair: { pencil: true },
+      x: 960, y: 1030, h: g.h, age: g.age, head: 'twenty', dress: P.dressAt(t, 'orange', 'teacher', 16.4, 17.4), hair: { pencil: true },
       armL: lens ? [1.3, 0.2] : [0.25, 0.15],
       armR: asking ? [2.2, 1.1] : [0.3, 0.5],
       holdR: asking ? (c, x, y) => P.picCard(c, x + 20, y - 70, pop(t, 17.8), P.pic.apple, '?', 260, 0.08) : null,
@@ -385,7 +385,7 @@
     // Parmis kneels at child height
     const g = growth(t);
     const pr = o.noParmis ? { x: 960, sy: 655 } : P.parmis(ctx, {
-      x: 960, y: lerp(1030, 1170, steps(seg(t, 25.7, 26.2), 3)), h: g.h, age: g.age, legs: false, hair: {},
+      x: 960, y: lerp(1030, 1170, steps(seg(t, 25.7, 26.2), 3)), h: g.h, age: g.age, legs: false, head: 'twenty', hair: {},
       dress: t < 30 ? P.dressAt(t, 'teacher', 'montessori', 26.2, 27.2) : P.dressAt(t, 'montessori', 'phonics', 32.9, 33.9),
       armL: phon ? [1.9 + wave(t, 2, 0.12), 0.5] : [0.7, 1.1], armR: phon ? [1.9 + wave(t, 3, 0.12), 0.5] : [0.75, 1.2],
       tilt: t < 31 ? -0.06 : 0.02,
@@ -543,7 +543,7 @@
     const y = lerp(1170, 1090, steps(seg(t, 35.8, 36.6), 3));
     const cardFace = Math.floor(steps(seg(t, 40.2, 41.4), 4) * 3);
     P.parmis(ctx, {
-      x: 960, y, h: 720, age: 1, legs: false, dress: P.dressAt(t, 'phonics', 'online', 36.6, 37.6),
+      x: 960, y, h: 720, age: 1, legs: false, head: t < 35.9 ? 'twenty' : 'adult', dress: P.dressAt(t, 'phonics', 'online', 36.6, 37.6),
       hair: { headset: steps(seg(t, 36.8, 37.2), 3) },
       armL: wav ? [2.6 + wave(t, 2, 0.3), 0.3] : sing ? [1.4, 0.8] : cardsUp ? [1.3, 1.6] : puppet ? [1.2, 1.4] : [0.3, 0.4],
       armR: card ? [1.2, 1.5] : sing ? [1.4, 0.8] : cardsUp ? [1.3, 1.6] : [0.3, 0.4],

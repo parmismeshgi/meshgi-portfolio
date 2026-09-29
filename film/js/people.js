@@ -2,9 +2,9 @@
 // and clothes are paper. Everyone else is simple paper, kept secondary.
 (() => {
   const P = window.P, C = P.COL, lerp = P.lerp;
-  // Two photo cut-outs: the childhood portrait (ages 7 and 12) and the current one.
+  // Three photo cut-outs: childhood (ages 7 and 12), age 20 (university years) and today.
   // sy = shoulder line as a fraction of the cut-out's height, just under the chin.
-  const HEADS = { adult: { key: 'HEAD', ar: 651 / 837, sy: 0.86 }, child: { key: 'HEAD_CHILD', ar: 477 / 611, sy: 0.9 } };
+  const HEADS = { adult: { key: 'HEAD', ar: 651 / 837, sy: 0.86 }, child: { key: 'HEAD_CHILD', ar: 477 / 611, sy: 0.9 }, twenty: { key: 'HEAD_20', ar: 406 / 390, sy: 0.9 } };
 
   const rot = (x, y, a) => [x * Math.cos(a) - y * Math.sin(a), x * Math.sin(a) + y * Math.cos(a)];
 
@@ -38,7 +38,7 @@
   // ---------------------------------------------------------------- Parmis
   // o: x, y (feet line), h (height), age (0 = seven, 0.4 = twelve, 1 = adult),
   //    dress (stage name or {from, to, p}), armL/armR ([upper, bend]),
-  //    holdL/holdR(ctx, x, y), tilt, head ('adult' | 'child'), hair {pencil, headset},
+  //    holdL/holdR(ctx, x, y), tilt, head ('child' | 'twenty' | 'adult'), hair {pencil, headset},
   //    legs (default true), sleeve {fill, tex}
   P.parmis = (ctx, o) => {
     const a = o.age == null ? 1 : o.age;
