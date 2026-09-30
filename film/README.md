@@ -21,3 +21,12 @@ node film/tools/export.mjs --stills 12.6,44   # single frames as JPEG
 Needs ffmpeg on PATH (or `FFMPEG=/path/to/ffmpeg`). The voiceover is a script:
 record it in your own voice against the `.srt` timings; the music already dips
 under each line.
+
+## Website block
+
+`embed/index.html` holds a drop-in block for the teaching page, between the
+`parmis-film:start` and `parmis-film:end` comments: the film in a torn paper
+mat, held on with clear tape. It autoplays muted while on screen, "Tap for
+sound" unmutes and starts the story from the beginning, and Pause stops it.
+Copy the block plus `parmis-orange-720.webm`, `parmis-orange-720.mp4` and
+`parmis-orange-poster.jpg` into the site.
