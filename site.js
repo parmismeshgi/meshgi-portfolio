@@ -230,3 +230,67 @@ if (photoLightbox) {
     if (opener) opener.focus();
   });
 }
+
+// Teaching film: plays muted while on screen; sound restarts the story once.
+const teachingFilm = document.querySelector("[data-teaching-film]");
+
+if (teachingFilm) {
+  const video = teachingFilm.querySelector("video");
+  const playButton = teachingFilm.querySelector("[data-film-play]");
+  const soundButton = teachingFilm.querySelector("[data-film-sound]");
+  const icons = {
+    play: '<path fill="currentColor" d="M8 5l11 7-11 7z"/>',
+    pause: '<path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/>',
+    soundOn: '<path fill="currentColor" d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+    soundOff: '<path fill="currentColor" d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+  };
+  let userPaused = reduceMotion;
+  let heardFromStart = false;
+
+  const setButton = (button, icon, label) => {
+    button.querySelector("svg").innerHTML = icon;
+    button.querySelector("span").textContent = label;
+  };
+  const syncPlay = () => setButton(playButton, video.paused ? icons.play : icons.pause, video.paused ? "Play" : "Pause");
+  const syncSound = () => {
+    soundButton.setAttribute("aria-pressed", String(!video.muted));
+    setButton(soundButton, video.muted ? icons.soundOff : icons.soundOn, video.muted ? "Tap for sound" : "Sound on");
+  };
+  const tryPlay = () => video.play().catch(() => {}).finally(syncPlay);
+
+  video.muted = true; // browsers only autoplay muted video
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !userPaused) tryPlay();
+      else if (!entry.isIntersecting && !video.paused) video.pause();
+    }, { threshold: 0.35 }).observe(video);
+  } else if (!reduceMotion) {
+    tryPlay();
+  }
+
+  playButton.addEventListener("click", () => {
+    userPaused = !video.paused;
+    if (userPaused) video.pause();
+    else tryPlay();
+  });
+
+  soundButton.addEventListener("click", () => {
+    video.muted = !video.muted;
+    if (!video.muted) {
+      video.volume = 1;
+      if (!heardFromStart) {
+        heardFromStart = true;
+        video.currentTime = 0;
+      }
+      userPaused = false;
+      tryPlay();
+    }
+    syncSound();
+  });
+
+  video.addEventListener("play", syncPlay);
+  video.addEventListener("pause", syncPlay);
+  syncPlay();
+  syncSound();
+}

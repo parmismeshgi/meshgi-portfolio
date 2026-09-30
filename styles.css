@@ -5961,3 +5961,240 @@ main#story .story h2::before {
   .ai-step-list li > span { font-size: 40px; }
   .ai-practice-proof { gap: 36px; padding: 36px 24px; border-radius: 22px; }
 }
+
+/* Teaching film: the portfolio film in a torn paper mat, held on with clear tape */
+.teaching-film {
+  width: var(--page);
+  margin: 0 auto;
+  padding: 24px 0 112px;
+}
+
+.teaching-film-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 34px;
+}
+
+.teaching-film-intro h2 {
+  margin: 0;
+  font: 400 clamp(38px, 4vw, 58px)/0.95 var(--serif);
+}
+
+.teaching-film-intro h2 em { color: var(--red); }
+
+.teaching-film-intro p {
+  max-width: 460px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.teaching-film-collage {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(14px, 3vw, 28px);
+}
+
+.teaching-film-back,
+.teaching-film-mat {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.teaching-film-back {
+  background: #d9c7a6;
+  filter: drop-shadow(0 6px 10px rgba(25, 23, 20, 0.18));
+  clip-path: polygon(0 1.5%, 6% 0, 14% 1%, 27% 0.2%, 41% 1.2%, 55% 0, 70% 1%, 84% 0.3%, 100% 1.2%, 99.4% 22%, 100% 47%, 99.2% 73%, 100% 100%, 86% 99%, 70% 100%, 52% 99.2%, 37% 100%, 21% 99.1%, 7% 100%, 0 99%, 0.7% 76%, 0 51%, 0.6% 24%);
+  transform: rotate(1.6deg) translate(10px, 8px);
+}
+
+.teaching-film-mat {
+  background-color: var(--white);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.08 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  filter: drop-shadow(0 10px 18px rgba(25, 23, 20, 0.22));
+  clip-path: polygon(0.4% 1.2%, 5% 0.3%, 11% 1.1%, 18% 0, 26% 0.9%, 35% 0.2%, 44% 1%, 52% 0.1%, 61% 0.8%, 69% 0, 78% 1%, 86% 0.2%, 93% 0.9%, 99.6% 0.3%, 99.1% 12%, 100% 26%, 99.3% 41%, 100% 57%, 99.2% 72%, 100% 86%, 99.5% 99.4%, 92% 100%, 83% 99.1%, 74% 100%, 64% 99.2%, 55% 100%, 46% 99.3%, 36% 100%, 27% 99.1%, 18% 100%, 9% 99.2%, 0.5% 100%, 0 87%, 0.8% 73%, 0 58%, 0.7% 43%, 0 28%, 0.8% 13%);
+  transform: rotate(-0.8deg);
+}
+
+.teaching-film-frame,
+.teaching-film-foot,
+.teaching-film-story {
+  position: relative;
+  z-index: 2;
+  transform: rotate(-0.8deg);
+}
+
+.teaching-film-screen {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--ink);
+  box-shadow: 0 0 0 1px rgba(25, 23, 20, 0.12), 0 3px 8px rgba(25, 23, 20, 0.18);
+}
+
+.teaching-film-screen video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teaching-film-tape {
+  position: absolute;
+  z-index: 3;
+  width: clamp(70px, 13vw, 128px);
+  height: clamp(22px, 3.6vw, 36px);
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(246, 242, 230, 0.42) 55%, rgba(255, 255, 255, 0.55));
+  box-shadow: 0 1px 2px rgba(25, 23, 20, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  clip-path: polygon(0 8%, 3% 0, 6% 10%, 9% 0, 91% 2%, 94% 12%, 97% 0, 100% 9%, 98% 30%, 100% 50%, 97% 70%, 100% 92%, 96% 100%, 93% 88%, 90% 100%, 8% 97%, 5% 88%, 2% 100%, 0 90%, 3% 70%, 0 50%, 2% 30%);
+  -webkit-backdrop-filter: blur(0.6px) saturate(1.08);
+  backdrop-filter: blur(0.6px) saturate(1.08);
+}
+
+.teaching-film-tape.is-tl { top: -10px; left: -24px; transform: rotate(-38deg); }
+.teaching-film-tape.is-tr { top: -12px; right: -26px; transform: rotate(34deg); }
+.teaching-film-tape.is-bl { bottom: -8px; left: -22px; transform: rotate(32deg); }
+.teaching-film-tape.is-br { right: -24px; bottom: -10px; transform: rotate(-40deg); }
+
+/* the small orange paper shape from the film, stuck on as a sticker */
+.teaching-film-sticker {
+  position: absolute;
+  z-index: 4;
+  top: clamp(-30px, -3vw, -18px);
+  right: clamp(40px, 9vw, 96px);
+  width: clamp(44px, 6vw, 62px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle at 34% 32%, #f07a4a 0 22%, var(--red) 23%);
+  box-shadow: 0 0 0 3px var(--white), 0 5px 10px rgba(25, 23, 20, 0.25);
+  transform: rotate(12deg);
+}
+
+.teaching-film-sticker::after {
+  position: absolute;
+  top: -14%;
+  left: 50%;
+  width: 42%;
+  height: 22%;
+  content: "";
+  background: var(--ink);
+  border-radius: 0 100% 0 100%;
+  transform: rotate(-18deg);
+}
+
+.teaching-film-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: clamp(14px, 2.4vw, 22px) 0 0;
+}
+
+.teaching-film-title {
+  margin: 0;
+  font: 400 clamp(24px, 3.4vw, 34px)/1.05 var(--serif);
+}
+
+.teaching-film-title em { color: var(--red); }
+
+.teaching-film-meta {
+  color: var(--muted);
+  font: 500 11px/1.2 var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.teaching-film-spacer { flex: 1 1 auto; }
+
+.teaching-film-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 16px 11px 13px;
+  color: var(--ink);
+  background: var(--white);
+  border: 0;
+  box-shadow: 2px 3px 0 rgba(25, 23, 20, 0.2), 0 0 0 1.5px var(--ink);
+  cursor: pointer;
+  font: 600 14px/1 var(--sans);
+  transform: rotate(-1.5deg);
+  transition: transform 120ms ease;
+}
+
+.teaching-film-button:hover { transform: rotate(0deg) translateY(-1px); }
+
+.teaching-film-button:focus-visible,
+.teaching-film-story summary:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+.teaching-film-button.is-sound {
+  color: var(--white);
+  background: var(--red);
+  box-shadow: 2px 3px 0 rgba(25, 23, 20, 0.25);
+  transform: rotate(1.5deg);
+}
+
+.teaching-film-button.is-sound[aria-pressed="true"] { background: var(--ink); }
+
+.teaching-film-button svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.teaching-film-story {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.teaching-film-story summary {
+  padding: 8px 0;
+  color: var(--ink);
+  cursor: pointer;
+  font: 500 12px/1 var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.teaching-film-story ol {
+  display: grid;
+  gap: 4px;
+  max-width: 70ch;
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+}
+
+@media (max-width: 560px) {
+  .teaching-film { padding-bottom: 72px; }
+  .teaching-film-back { transform: rotate(1.2deg) translate(2px, 6px); }
+  .teaching-film-tape.is-tl { left: -12px; }
+  .teaching-film-tape.is-tr { right: -14px; }
+  .teaching-film-tape.is-bl,
+  .teaching-film-tape.is-br,
+  .teaching-film-spacer { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .teaching-film-button,
+  .teaching-film-button:hover {
+    transform: none;
+    transition: none;
+  }
+}

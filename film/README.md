@@ -22,11 +22,18 @@ Needs ffmpeg on PATH (or `FFMPEG=/path/to/ffmpeg`). The voiceover is a script:
 record it in your own voice against the `.srt` timings; the music already dips
 under each line.
 
-## Website block
+## On the website
 
-`embed/index.html` holds a drop-in block for the teaching page, between the
-`parmis-film:start` and `parmis-film:end` comments: the film in a torn paper
-mat, held on with clear tape. It autoplays muted while on screen, "Tap for
-sound" unmutes and starts the story from the beginning, and Pause stops it.
-Copy the block plus `parmis-orange-720.webm`, `parmis-orange-720.mp4` and
-`parmis-orange-poster.jpg` into the site.
+The film appears on `/teaching/` (`teaching.html`, copied to
+`teaching/index.html` and `teaching.md` by `scripts/build-discovery.py`). The
+frame is styled in `styles.css` (`.teaching-film*`), its playback lives in
+`site.js` (`[data-teaching-film]`), and the web-sized video is in
+`assets/teaching/`. It autoplays muted while on screen; "Tap for sound"
+unmutes and starts the story from the beginning; Play/Pause stops it.
+
+To refresh the website copy after re-exporting the film:
+
+```sh
+ffmpeg -i film/export/parmis-orange.mp4 -vf scale=1280:720 -c:v libvpx-vp9 -b:v 0 -crf 38 -c:a libopus -b:a 96k assets/teaching/parmis-orange-720.webm
+ffmpeg -i film/export/parmis-orange.mp4 -vf scale=1280:720 -c:v libx264 -crf 25 -tune animation -c:a aac -b:a 128k -movflags +faststart assets/teaching/parmis-orange-720.mp4
+```
