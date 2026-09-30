@@ -1,4 +1,4 @@
-# Parmis & Orange — portfolio film
+# Parmis & Orange: portfolio film
 
 A 90-second paper-cut animation about growing up with Orange Language Institute.
 Open `index.html` through a local server (`npx serve film`) to play it, scrub

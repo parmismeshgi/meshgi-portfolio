@@ -8,7 +8,7 @@ window.FILM = {
     {
       id: 'child', n: 1, stage: 'Age 7', start: 0, end: 9,
       title: 'A child learning English',
-      image: 'Blank paper. The small orange shape drops in and stamps the title, then hops into a notebook. The classroom is built in paper pieces around me, age seven, perched on a stool in the middle with my notebook. My mother stands at the board — seen from a child’s height, so only her cardigan, her arm and the chalk are in frame. Classmates sit at desks either side.',
+      image: 'Blank paper. The small orange shape drops in and stamps the title, then hops into a notebook. The classroom is built in paper pieces around me, age seven, perched on a stool in the middle with my notebook. My mother stands at the board. From a child’s height, only her cardigan, her arm and the chalk are in frame. Classmates sit at desks either side.',
       dress: 'Children’s book pages, bright magazine scraps, crayon drawings, small alphabet tiles. My face is cut from my own childhood photo, flowers in my hair.',
       movement: 'Chalk letters appear stroke by stroke. Alphabet tiles lift off the board and flutter onto my notebook and dress. The orange shape lands on the notebook page as a doodle.',
       transition: 'I lift the notebook over my head. Its page opens and unfolds into the hand-cut “Orange” sign.',
@@ -71,7 +71,7 @@ window.FILM = {
     {
       id: 'volante', n: 8, stage: 'Volante', start: 62.6, end: 70.2,
       title: 'A new design career',
-      image: 'A calm studio. I talk with users; their speech bubbles surround me. Accessibility pieces — contrast, captions, keyboard, access symbol — pin up behind. A thin orange paper thread runs through the background, with the small shape tied to it.',
+      image: 'A calm studio. I talk with users; their speech bubbles surround me. Contrast, captions, keyboard, and access symbols pin up behind. A thin orange paper thread runs through the background, with the small shape tied to it.',
       dress: 'User research, conversation bubbles, accessibility symbols, “equal access” tags.',
       movement: 'Bubbles pop in turn as each user speaks. Accessibility tags flip into place. The orange thread quietly sways.',
       transition: 'The thread pulls tight and tugs a browser window into the frame.',
@@ -84,7 +84,7 @@ window.FILM = {
       dress: 'Website screens, code brackets, AI sparkles, test cards and review checklists.',
       movement: 'AI sparkles and code brackets orbit my hands as the pages assemble. A question card is answered; a result card appears marked provisional. On the team side, a row moves from “to review” to “talk with learner” to “find a class”.',
       transition: 'Both screens shrink and fly onto my dress.',
-      text: ['years later · back to Orange', 'Take the placement test', 'Suggested level · provisional — our team will confirm your class', 'Team site: review · talk with learner · find a class'],
+      text: ['years later · back to Orange', 'Take the placement test', 'Suggested level · provisional. Our team will confirm your class', 'Team site: review · talk with learner · find a class'],
     },
     {
       id: 'close', n: 10, stage: 'Today', start: 81.9, end: 90,

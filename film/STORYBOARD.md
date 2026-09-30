@@ -1,4 +1,4 @@
-# Parmis & Orange — timed storyboard
+# Parmis & Orange: timed storyboard
 
 A 90-second paper-cut portfolio film. Stop-motion at 12 fps, delivered at 24 fps.
 Generated from `film/script.js` by `node film/tools/storyboard-md.mjs`.
@@ -18,7 +18,7 @@ Generated from `film/script.js` by `node film/tools/storyboard-md.mjs`.
 
 ## 1. A child learning English (0:00.0–0:09.0, 9 s)
 
-- **Image:** Blank paper. The small orange shape drops in and stamps the title, then hops into a notebook. The classroom is built in paper pieces around me, age seven, perched on a stool in the middle with my notebook. My mother stands at the board — seen from a child’s height, so only her cardigan, her arm and the chalk are in frame. Classmates sit at desks either side.
+- **Image:** Blank paper. The small orange shape drops in and stamps the title, then hops into a notebook. The classroom is built in paper pieces around me, age seven, perched on a stool in the middle with my notebook. My mother stands at the board. From a child’s height, only her cardigan, her arm and the chalk are in frame. Classmates sit at desks either side.
 - **Dress:** Children’s book pages, bright magazine scraps, crayon drawings, small alphabet tiles. My face is cut from my own childhood photo, flowers in my hair.
 - **Movement:** Chalk letters appear stroke by stroke. Alphabet tiles lift off the board and flutter onto my notebook and dress. The orange shape lands on the notebook page as a doodle.
 - **Transition:** I lift the notebook over my head. Its page opens and unfolds into the hand-cut “Orange” sign.
@@ -99,7 +99,7 @@ Generated from `film/script.js` by `node film/tools/storyboard-md.mjs`.
 
 ## 8. A new design career (1:02.6–1:10.2, 8 s)
 
-- **Image:** A calm studio. I talk with users; their speech bubbles surround me. Accessibility pieces — contrast, captions, keyboard, access symbol — pin up behind. A thin orange paper thread runs through the background, with the small shape tied to it.
+- **Image:** A calm studio. I talk with users; their speech bubbles surround me. Contrast, captions, keyboard, and access symbols pin up behind. A thin orange paper thread runs through the background, with the small shape tied to it.
 - **Dress:** User research, conversation bubbles, accessibility symbols, “equal access” tags.
 - **Movement:** Bubbles pop in turn as each user speaks. Accessibility tags flip into place. The orange thread quietly sways.
 - **Transition:** The thread pulls tight and tugs a browser window into the frame.
@@ -114,7 +114,7 @@ Generated from `film/script.js` by `node film/tools/storyboard-md.mjs`.
 - **Dress:** Website screens, code brackets, AI sparkles, test cards and review checklists.
 - **Movement:** AI sparkles and code brackets orbit my hands as the pages assemble. A question card is answered; a result card appears marked provisional. On the team side, a row moves from “to review” to “talk with learner” to “find a class”.
 - **Transition:** Both screens shrink and fly onto my dress.
-- **On screen:** “years later · back to Orange” · “Take the placement test” · “Suggested level · provisional — our team will confirm your class” · “Team site: review · talk with learner · find a class”
+- **On screen:** “years later · back to Orange” · “Take the placement test” · “Suggested level · provisional. Our team will confirm your class” · “Team site: review · talk with learner · find a class”
 - **Voiceover:**
   - `1:10.3–1:12.8` Years later, I came back to Orange with new skills.
   - `1:13.0–1:15.4` With AI, design and code, I built its website,

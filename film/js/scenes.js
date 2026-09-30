@@ -873,7 +873,7 @@
       P.pill(g, w - 40 - cw / 2, y + 50, cw, 34, r === 0 && stage > 0 ? C.orange : C.cream, chip, { f: 'mono', size: 14, weight: 500, color: r === 0 && stage > 0 ? C.cream : C.ink, stroke: C.ink2 });
     });
     if (stage === 3) {
-      P.text(g, 'Class options — confirm with the learner', 24, 530, { f: 'sans', size: 17, weight: 500, align: 'left' });
+      P.text(g, 'Class options: confirm with the learner', 24, 530, { f: 'sans', size: 17, weight: 500, align: 'left' });
       [0, 1, 2].forEach((k) => { g.fillStyle = k === 1 ? C.orange : C.paper2; g.beginPath(); g.roundRect(24 + k * 190, 555, 170, 70, 12); g.fill(); g.fillStyle = k === 1 ? 'rgba(251,248,241,0.8)' : 'rgba(25,23,20,0.35)'; g.fillRect(44 + k * 190, 580, 100, 8); g.fillRect(44 + k * 190, 600, 60, 8); });
     }
   }

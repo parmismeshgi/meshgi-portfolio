@@ -11,7 +11,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root, 'script.js'), 'utf8'), sandbo
 const F = sandbox.window.FILM;
 const tc = (s) => { const d = Math.round(s * 10); return `${Math.floor(d / 600)}:${String(Math.floor(d / 10) % 60).padStart(2, '0')}.${d % 10}`; };
 
-let md = `# ${F.title} — timed storyboard\n\nA ${F.duration}-second paper-cut portfolio film. Stop-motion at ${F.fps} fps, delivered at 24 fps.\n`;
+let md = `# ${F.title}: timed storyboard\n\nA ${F.duration}-second paper-cut portfolio film. Stop-motion at ${F.fps} fps, delivered at 24 fps.\n`;
 md += `Generated from \`film/script.js\` by \`node film/tools/storyboard-md.mjs\`.\n\n`;
 md += `| # | Time | Chapter |\n|---|---|---|\n` + F.scenes.map((s) => `| ${s.n} | ${tc(s.start)}–${tc(s.end)} | ${s.title} |`).join('\n') + '\n';
 for (const s of F.scenes) {
