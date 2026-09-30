@@ -1,0 +1,44 @@
+# Parmis Meshgi
+
+> Senior product designer in Toronto. The portfolio covers restaurant software, UX research, UI design, product strategy, design systems, AI-assisted design, and shipped products.
+
+Use the Markdown links below for compact, text-first versions. Use the canonical links for the visual portfolio.
+
+## Main portfolio
+
+- [Parmis Meshgi | Senior Product Designer in Toronto](/index.md): Senior product designer in Toronto working across product strategy, UX design, UI design, and complex restaurant software.
+- [Product Design Case Studies | Parmis Meshgi](/product-design.md): Product design case studies by Toronto senior product designer Parmis Meshgi across Kiosk, Bar Tabs, Backoffice, and POS.
+- [Restaurant Product Design Practice | Parmis Meshgi](/restaurant-product-design.md): A hiring guide to Parmis Meshgi's restaurant product design work across research, prototypes, testing, delivery, AI, and design systems.
+- [AI Design Practice | Parmis Meshgi](/ai-design-practice.md): How senior product designer Parmis Meshgi uses AI for research synthesis, concept exploration, design systems, prototypes, code, and decision records.
+- [Senior Product Designer Resume | Parmis Meshgi](/resume.md): View or download the resume of Parmis Meshgi, a senior product designer in Toronto, Canada.
+
+## Restaurant product work
+
+- [Self-Service Kiosk UX Case Study | Parmis Meshgi](/kiosk.md): A self-service Kiosk UX and product design case study by senior product designer Parmis Meshgi.
+- [Bar Tabs UX Case Study | Parmis Meshgi](/bar-tabs.md): A Bar Tabs and Table Service UX and product design case study by senior product designer Parmis Meshgi.
+- [Backoffice UX Case Study | Parmis Meshgi](/backoffice.md): A Backoffice Menu Management UX and product design case study by senior product designer Parmis Meshgi.
+- [Point of Sale UX Case Study | Parmis Meshgi](/pos.md): A responsive point-of-sale UX and product design case study by senior product designer Parmis Meshgi.
+
+## Independent products
+
+- [Independent Product Design Projects | Parmis Meshgi](/playground.md): Independent apps and web products designed and built by Toronto product designer Parmis Meshgi.
+- [Footsteps Product Design Case Study | Parmis Meshgi](/footsteps.md): Footsteps is a private location journal for iPhone and iPad, designed by product designer Parmis Meshgi.
+- [Seej Product Design Case Study | Parmis Meshgi](/seej.md): Seej is a private smoking-pattern tracker for iPhone, designed by product designer Parmis Meshgi.
+- [Health Exporter Case Study | Parmis Meshgi](/health-exporter.md): Health Exporter is a user-controlled Apple Health export tool, designed by product designer Parmis Meshgi.
+- [Family Tree Product Design Case Study | Parmis Meshgi](/family-tree.md): Family Tree is a private bilingual family map designed by product designer Parmis Meshgi.
+- [Fitness Website Product Design Case Study | Parmis Meshgi](/fitness.md): Fitness Website is a private shared health dashboard designed by product designer Parmis Meshgi.
+- [Orange Institute UX Case Study | Parmis Meshgi](/orange-institute.md): Orange Institute is a bilingual language-school website and placement flow designed by Parmis Meshgi.
+- [Hitchi Product Design Case Study | Parmis Meshgi](/hitchi.md): Hitchi is a Persian music timeline card game and scanner designed by product designer Parmis Meshgi.
+- [Rooy.dad Product Design Case Study | Parmis Meshgi](/rooydad.md): Rooy.dad is a bilingual guide to Persian community events in Toronto, designed by Parmis Meshgi.
+- [Chaashni Product Design Case Study | Parmis Meshgi](/chaashni.md): Chaashni is a Persian recipe finder designed by product designer Parmis Meshgi.
+
+## Other practice
+
+- [Photography | Parmis Meshgi](/photography.md): Analog and digital photography by Toronto product designer Parmis Meshgi.
+- [Orange Teaching Platform | Parmis Meshgi](/teaching.md): A teaching platform and education product designed by Parmis Meshgi.
+
+## Discovery files
+
+- [XML sitemap](/sitemap.xml): Canonical search routes.
+- [Robots rules](/robots.txt): Crawler access and sitemap location.
+- [Complete text corpus](/llms-full.txt): All public Markdown pages in one document.

@@ -1,0 +1,34 @@
+meshgi.com {
+	root * /opt/apps/meshgi-com/current
+	encode zstd gzip
+
+	@markdown path *.md
+	header @markdown Content-Type "text/markdown; charset=utf-8"
+	header @markdown X-Robots-Tag "noindex, follow"
+
+	header {
+		Content-Security-Policy "default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self' https://fonts.gstatic.com; form-action 'self'; frame-ancestors 'none'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; upgrade-insecure-requests"
+		Cross-Origin-Opener-Policy "same-origin"
+		Cross-Origin-Resource-Policy "same-origin"
+		Permissions-Policy "camera=(), geolocation=(), microphone=(), payment=()"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+	}
+
+	route {
+		@homeLegacy path /index.html
+		redir @homeLegacy / permanent
+
+		@htmlLegacy path_regexp htmlLegacy ^/(.+)\.html$
+		redir @htmlLegacy /{re.htmlLegacy.1} permanent
+
+		try_files {path} {path}.html
+		file_server
+	}
+}
+
+www.meshgi.com {
+	redir https://meshgi.com{uri} permanent
+}
