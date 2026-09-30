@@ -1143,6 +1143,97 @@ body.has-lightbox { overflow: hidden; }
   transform: rotate(-16deg);
 }
 
+.value-case-page.teaching-case-page {
+  --case-accent: #a84f00;
+  --case-tint: #fff0d8;
+  --case-tint-strong: #ffd68f;
+  --case-line: #d7b478;
+}
+
+.teaching-case-hero .value-hero-grid {
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.75fr);
+}
+
+.teaching-case-hero .value-hero-copy h1 {
+  max-width: 760px;
+  font-size: clamp(68px, 8.5vw, 126px);
+}
+
+.teaching-case-hero .value-hero-copy h1 em {
+  color: var(--case-accent);
+}
+
+.teaching-case-hero .large-board {
+  min-height: 440px;
+}
+
+.teaching-related-project {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr);
+  gap: clamp(42px, 8vw, 112px);
+  align-items: center;
+  width: var(--page);
+  margin: 0 auto 112px;
+  padding: 72px 0 0;
+  border-top: 1px solid var(--ink);
+}
+
+.teaching-related-copy h2 {
+  max-width: 580px;
+  margin: 18px 0 24px;
+  font: 400 clamp(58px, 7vw, 104px)/0.88 var(--serif);
+  letter-spacing: -0.04em;
+}
+
+.teaching-related-copy > p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 0 0 32px;
+  color: #514b43;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.teaching-related-art {
+  position: relative;
+  display: block;
+  min-height: 500px;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--case-tint), var(--case-tint-strong));
+  border: 1px solid var(--case-line);
+  border-radius: 34px;
+}
+
+.teaching-related-screen {
+  position: absolute;
+  right: 7%;
+  bottom: -4%;
+  width: 78%;
+  border: 7px solid var(--white);
+  border-radius: 24px;
+  box-shadow: 0 28px 60px rgba(25, 23, 20, 0.2);
+  transform: rotate(3deg);
+  transition: transform 180ms ease;
+}
+
+.teaching-related-icon {
+  position: absolute;
+  top: 34px;
+  left: 34px;
+  z-index: 1;
+  width: 120px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 6px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 0 16px 28px rgba(25, 23, 20, 0.18);
+  transform: rotate(-6deg);
+}
+
+.teaching-related-art:hover .teaching-related-screen,
+.teaching-related-art:focus-visible .teaching-related-screen {
+  transform: rotate(1deg) scale(1.02);
+}
+
 .project-outline {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -4829,6 +4920,7 @@ main#story .story h2::before {
   .value-evidence-grid { grid-template-columns: 1fr 1fr; }
   .value-scale-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .kiosk-demo-shell { grid-template-columns: minmax(300px, 500px) minmax(230px, 0.7fr); gap: 42px; }
+  .teaching-related-project { grid-template-columns: minmax(0, 0.8fr) minmax(340px, 1.2fr); gap: 42px; }
 }
 
 @media (max-width: 700px) {
@@ -4862,6 +4954,13 @@ main#story .story h2::before {
   .work-pos-hero-device { width: 96%; }
   .kiosk-demo-shell { grid-template-columns: 1fr; }
   .kiosk-demo-guide { max-width: 520px; margin: 34px auto 0; }
+  .teaching-case-hero .value-hero-grid,
+  .teaching-related-project { grid-template-columns: 1fr; }
+  .teaching-case-hero .value-hero-grid { display: block; width: 100%; }
+  .teaching-case-hero .value-hero-copy { width: 100%; max-width: 100%; }
+  .teaching-case-hero .large-board { width: 100%; min-height: 320px; margin-top: 48px; }
+  .teaching-related-project { margin-bottom: 78px; padding-top: 58px; }
+  .teaching-related-art { min-height: 390px; }
 }
 
 @media (max-width: 760px) {
@@ -4889,6 +4988,14 @@ main#story .story h2::before {
   .value-summary > div:nth-child(2) { min-height: 146px; border-right: 0; border-bottom: 1px solid var(--case-line); }
   .value-summary > div:last-child { border-bottom: 0; }
   .value-hero-art { min-height: 320px; }
+  .teaching-case-hero .value-hero-copy h1 { font-size: clamp(58px, 18vw, 76px); }
+  .teaching-case-hero .value-hero-copy h1 span,
+  .teaching-case-hero .value-hero-copy h1 em { display: block; }
+  .teaching-case-hero .value-hero-lead { max-width: 100%; font-size: 24px; }
+  .teaching-related-copy h2 { font-size: clamp(52px, 15vw, 70px); }
+  .teaching-related-art { min-height: 320px; }
+  .teaching-related-icon { top: 22px; left: 22px; width: 92px; }
+  .teaching-related-screen { width: 82%; }
   .value-hero-icon { top: 24px; left: 24px; width: 92px; height: 92px; }
   .value-hero-screen { width: 74%; }
   .value-screen-gallery { grid-template-columns: 1fr; }

@@ -13,14 +13,34 @@ last_updated: "2026-09-30"
 
 Canonical page: [https://meshgi.com/teaching/](https://meshgi.com/teaching/)
 
-Personal project · Teaching
+[← Four sides of my practice](https://meshgi.com/)
 
-# Orange Teaching
-Platform
+Personal practice · Teaching
 
-A focused case-study layout for the learning problem, platform system, and teaching results.
+# Orange Teaching Platform
+
+I learned to design
+by watching how children learn.
+
+[Watch the story ↓](https://meshgi.com/teaching/#teaching-film-heading)
 
 Orange Teaching Platform
+
+Practice Teaching children
+
+English, phonics, and Montessori methods
+
+What I learned Watch before solving
+
+Different learners need different paths
+
+Story format 90-second film
+
+A paper-cut timeline from teaching to design
+
+Connected project Orange Institute
+
+A bilingual website and placement flow
 
 ## Growing up with Orange
 
@@ -71,3 +91,17 @@ Your project context will define the experience, tools, and design decisions.
 ## Teaching in practice
 
 Your project context will define the lessons, feedback, and outcomes.
+
+Continue with the product
+
+## Orange Language Institute
+
+I returned to my family’s school to design its bilingual website and class-placement flow.
+
+[Read the case study →](https://meshgi.com/orange-institute/)
+
+[
+
+![Children learning at Orange Language Institute](https://meshgi.com/assets/playground/orange-hero.jpg)
+
+](https://meshgi.com/orange-institute/)
