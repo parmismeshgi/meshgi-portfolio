@@ -294,3 +294,81 @@ if (teachingFilm) {
   syncPlay();
   syncSound();
 }
+
+// Teaching storybook: each click turns to the next two-page spread.
+const storybook = document.querySelector("[data-storybook]");
+
+if (storybook) {
+  const spreads = Array.from(storybook.querySelectorAll("[data-story-spread]"));
+  const previousButton = storybook.querySelector("[data-story-prev]");
+  const nextButton = storybook.querySelector("[data-story-next]");
+  const status = storybook.querySelector("[data-story-status]");
+  let activeSpread = 0;
+  let isTurning = false;
+
+  const updateStorybook = () => {
+    spreads.forEach((spread, index) => {
+      const isActive = index === activeSpread;
+      spread.hidden = !isActive;
+      spread.classList.toggle("is-active", isActive);
+      spread.setAttribute("aria-hidden", String(!isActive));
+    });
+
+    previousButton.disabled = activeSpread === 0;
+    nextButton.disabled = activeSpread === spreads.length - 1;
+    const firstPage = (activeSpread * 2) + 1;
+    status.textContent = `Pages ${firstPage} and ${firstPage + 1} of ${spreads.length * 2}`;
+  };
+
+  const turnTo = (nextSpread, direction) => {
+    if (isTurning || nextSpread < 0 || nextSpread >= spreads.length || nextSpread === activeSpread) return;
+    isTurning = true;
+    const oldSpread = spreads[activeSpread];
+    const turnClass = direction === "back" ? "is-turning-back" : "is-turning-forward";
+    const boundaryFocus = (
+      nextSpread === spreads.length - 1 && document.activeElement === nextButton
+    ) ? previousButton : (
+      nextSpread === 0 && document.activeElement === previousButton
+    ) ? nextButton : null;
+
+    const showNextSpread = () => {
+      activeSpread = nextSpread;
+      updateStorybook();
+      if (boundaryFocus) boundaryFocus.focus();
+    };
+
+    if (reduceMotion) {
+      showNextSpread();
+      isTurning = false;
+      return;
+    }
+
+    oldSpread.classList.add(turnClass);
+    window.setTimeout(() => {
+      oldSpread.classList.remove(turnClass);
+      showNextSpread();
+      const newSpread = spreads[activeSpread];
+      newSpread.classList.add(turnClass);
+      window.setTimeout(() => {
+        newSpread.classList.remove(turnClass);
+        isTurning = false;
+      }, 440);
+    }, 220);
+  };
+
+  previousButton.addEventListener("click", () => turnTo(activeSpread - 1, "back"));
+  nextButton.addEventListener("click", () => turnTo(activeSpread + 1, "forward"));
+
+  storybook.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      turnTo(activeSpread - 1, "back");
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      turnTo(activeSpread + 1, "forward");
+    }
+  });
+
+  updateStorybook();
+}

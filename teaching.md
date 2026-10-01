@@ -52,27 +52,59 @@ A 90-second paper-cut film
 
 Play Tap for sound
 
-Read the story
+Turn the pages
 
-- My mother was my first English teacher. At seven, I sat in her class and filled notebooks with letters.
+### Parmis & Orange
 
-- When I was twelve, she opened her own school. She named it Orange. It became our family’s story.
+How a child in her mother's classroom became a teacher, then a designer.
 
-- At university, I started teaching children at Orange. Teaching showed me how differently each child learns.
+Page 1
 
-- So I trained to teach younger children: Montessori, where small hands lead, and phonics, where every letter has a sound.
+#### A notebook full of words
 
-- Then COVID moved my classroom onto a screen. I worked hard to keep very young children with me online, and they played along.
+When Parmis was seven, her first English teacher was her mother. Every new word went into a little notebook.
 
-- But the lesson depended on a screen that wasn’t made for them. What if it were designed for children? That question led me to UX design.
+Page 2
 
-- So I moved to Canada to study it. At BrainStation, my capstone was a teaching platform for young children, built on what children and teachers had shown me.
+#### A school called Orange
 
-- Then I began my design career at Volante. I talked with users and designed for equal access.
+When Parmis was twelve, her mother opened a school and named it Orange. Its rooms filled with stories, songs, and curious questions.
 
-- Years later, I came back to Orange with new skills. With AI, design and code, I built its website, where learners explore the school and take a placement test, and a team site where staff review results and help choose a class.
+Page 3
 
-- Every chapter shaped the designer I am. I grew up with Orange. Then I helped it grow in a new way.
+#### The teacher learns too
+
+At university, Parmis returned to Orange as a teacher. She saw that each child needed a different way into the lesson.
+
+Page 4
+
+#### Small hands, big clues
+
+Phonics made letters speak. Montessori let children lead with their hands. Parmis learned to watch before she solved.
+
+Page 5
+
+#### The classroom moved
+
+Then every desk moved onto a screen. The children tried hard, but the screen did not know how young learners played, moved, or asked for help.
+
+Page 6
+
+#### A new question
+
+Parmis wondered, "What if the screen could learn from its users too?" That question led her to UX design.
+
+Page 7
+
+#### A new chapter
+
+She moved to Canada, studied UX, and designed a learning platform around what children and teachers had shown her.
+
+Page 8
+
+#### Back to Orange
+
+Years later, Parmis returned with design, code, and AI. The school helped her grow. Now she helps it grow too.
 
 01
 

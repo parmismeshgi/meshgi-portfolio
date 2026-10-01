@@ -102,7 +102,13 @@ class MarkdownParser(HTMLParser):
             if tag not in self.VOID_TAGS:
                 self.skip_depth += 1
             return
-        if tag in {"head", "script", "style", "svg", "noscript"} or classes & {"site-header", "site-footer", "skip-link"}:
+        if tag in {"head", "script", "style", "svg", "noscript"} or classes & {
+            "site-header",
+            "site-footer",
+            "skip-link",
+            "storybook-scene",
+            "storybook-controls",
+        }:
             self.skip_depth = 1
             return
         if tag == "nav":
