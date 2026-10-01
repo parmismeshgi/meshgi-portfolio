@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/teaching/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-30"
+last_updated: "2026-10-01"
 ---
 
 > A teaching platform and education product designed by Parmis Meshgi.
@@ -24,7 +24,11 @@ by watching how children learn.
 
 [Watch the story ↓](https://meshgi.com/teaching/#teaching-film-heading)
 
-Orange Teaching Platform
+![Orange Language Institute website on a laptop screen](https://meshgi.com/assets/teaching/orange-site-desktop.webp)
+
+![Orange Language Institute website on a phone screen](https://meshgi.com/assets/teaching/orange-site-mobile.webp)
+
+Responsive website · guided placement flow
 
 Practice Teaching children
 

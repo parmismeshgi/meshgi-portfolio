@@ -108,6 +108,7 @@ class MarkdownParser(HTMLParser):
             "skip-link",
             "storybook-scene",
             "storybook-controls",
+            "teaching-collage-paper",
         }:
             self.skip_depth = 1
             return
