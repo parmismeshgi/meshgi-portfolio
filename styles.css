@@ -4392,7 +4392,7 @@ main#story .story h2::before {
   color: #514b43;
   background: var(--case-tint);
   border-left: 4px solid var(--case-accent);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -4954,7 +4954,7 @@ main#story .story h2::before {
 .kiosk-demo-guide-note {
   margin: 0;
   color: #514b43;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.55;
 }
 
@@ -4970,7 +4970,7 @@ main#story .story h2::before {
   padding: 15px 12px 15px 38px;
   color: #766f66;
   border-top: 1px solid #bdb5aa;
-  font: 600 11px/1 var(--mono);
+  font: 600 13px/1 var(--mono);
   text-transform: uppercase;
 }
 
