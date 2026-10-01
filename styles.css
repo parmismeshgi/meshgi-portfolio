@@ -4385,6 +4385,19 @@ main#story .story h2::before {
   line-height: 1.6;
 }
 
+.kiosk-demo-disclaimer {
+  max-width: 670px;
+  margin: 18px 0 0;
+  padding: 13px 16px;
+  color: #514b43;
+  background: var(--case-tint);
+  border-left: 4px solid var(--case-accent);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.kiosk-demo-disclaimer strong { color: var(--ink); }
+
 .kiosk-demo-shell {
   display: grid;
   grid-template-columns: minmax(320px, 560px) minmax(260px, 390px);

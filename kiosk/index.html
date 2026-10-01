@@ -35,7 +35,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=hiring-path-1">
+  <link rel="stylesheet" href="/styles.css?v=kiosk-disclaimer-1">
   <link rel="stylesheet" href="/kiosk-demo.css?v=kiosk-demo-4">
 </head>
 <body class="value-case-page work-value-case work-kiosk-page">
@@ -133,14 +133,14 @@
     </section>
 
     <section class="value-section value-product-section" id="product">
-      <header class="value-section-head"><p class="section-label">Interactive product</p><h2>Use the self-service Kiosk.</h2><p class="kiosk-demo-intro">Choose a service type, build an order, change its quantity, and complete checkout with public sample menu content.</p></header>
+      <header class="value-section-head"><p class="section-label">Interactive product</p><h2>Use the self-service Kiosk.</h2><p class="kiosk-demo-intro">Choose a service type, build an order, change its quantity, and complete checkout with public sample menu content.</p><p class="kiosk-demo-disclaimer"><strong>Prototype note:</strong> This is not a one-to-one copy of the Volanté Kiosk. It is a simplified public preview.</p></header>
       <div class="kiosk-demo-shell" data-kiosk-experience>
         <div class="kiosk-product-viewport" data-kiosk-screen aria-label="Interactive Kiosk product preview">
           <div class="kiosk-live-stage" data-kiosk-stage aria-live="polite"></div>
         </div>
         <aside class="kiosk-demo-guide" aria-label="Prototype guide">
           <p class="section-label">Interactive Kiosk</p>
-          <div class="kiosk-demo-step"><span data-kiosk-step-number>00</span><div><strong data-kiosk-step-title>Start screen</strong><p data-kiosk-step-copy>Enter the same full-screen Kiosk journey used in the product.</p></div></div>
+          <div class="kiosk-demo-step"><span data-kiosk-step-number>00</span><div><strong data-kiosk-step-title>Start screen</strong><p data-kiosk-step-copy>Enter a simplified full-screen Kiosk journey based on the product.</p></div></div>
           <ol class="kiosk-demo-progress" aria-label="Ordering progress">
             <li class="is-current" data-kiosk-progress="splash">Start</li>
             <li data-kiosk-progress="saleType">Service</li>
@@ -149,7 +149,7 @@
             <li data-kiosk-progress="payment">Payment</li>
             <li data-kiosk-progress="complete">Done</li>
           </ol>
-          <p class="kiosk-demo-guide-note">The layout, accessibility panel, option drawer, quantity controls, order table, and receipt actions follow the local Kiosk codebase.</p>
+          <p class="kiosk-demo-guide-note">The interaction patterns follow the local Kiosk codebase. Private product details are omitted.</p>
           <button class="kiosk-demo-reset" type="button" data-kiosk-action="reset">Reset Kiosk</button>
         </aside>
       </div>

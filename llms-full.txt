@@ -566,7 +566,7 @@ html_url: "https://meshgi.com/kiosk/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-10-01"
 ---
 
 > A self-service Kiosk UX and product design case study by senior product designer Parmis Meshgi.
@@ -710,13 +710,15 @@ Interactive product
 
 Choose a service type, build an order, change its quantity, and complete checkout with public sample menu content.
 
+Prototype note: This is not a one-to-one copy of the Volanté Kiosk. It is a simplified public preview.
+
 Interactive Kiosk
 
 00
 
 Start screen
 
-Enter the same full-screen Kiosk journey used in the product.
+Enter a simplified full-screen Kiosk journey based on the product.
 
 - Start
 
@@ -730,7 +732,7 @@ Enter the same full-screen Kiosk journey used in the product.
 
 - Done
 
-The layout, accessibility panel, option drawer, quantity controls, order table, and receipt actions follow the local Kiosk codebase.
+The interaction patterns follow the local Kiosk codebase. Private product details are omitted.
 
 Reset Kiosk
 
