@@ -6471,7 +6471,7 @@ main#story .story h2::before {
 
 @media (max-width: 560px) {
   .teaching-film { padding-bottom: 72px; }
-  .teaching-film-back { transform: rotate(1.2deg) translate(2px, 6px); }
+  .teaching-film-back { transform: translateY(6px); }
   .teaching-film-tape.is-tl { left: -12px; }
   .teaching-film-tape.is-tr { right: -14px; }
   .teaching-film-tape.is-bl,
@@ -6487,10 +6487,37 @@ main#story .story h2::before {
   }
 }
 
-/* Parmis and Orange: a small illustrated storybook below the film */
+/* Parmis and Orange: a hidden illustrated storybook below the film */
+.teaching-story-disclosure {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+.teaching-story-disclosure > summary {
+  display: inline-flex;
+  min-height: 44px;
+  padding: 12px 18px;
+  align-items: center;
+  color: var(--white);
+  background: var(--red);
+  box-shadow: 3px 4px 0 rgba(25, 23, 20, 0.2);
+  cursor: pointer;
+  font: 600 13px/1 var(--mono);
+  letter-spacing: 0.08em;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.teaching-story-disclosure > summary::-webkit-details-marker { display: none; }
+.teaching-story-disclosure > summary::after { margin-left: 12px; content: "+"; font-size: 20px; }
+.teaching-story-disclosure[open] > summary::after { content: "−"; }
+.teaching-story-disclosure > summary:hover { transform: translateY(-1px); }
+.teaching-story-disclosure > summary:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
 .teaching-storybook {
   width: min(100%, 980px);
-  margin: clamp(44px, 6vw, 72px) auto 10px;
+  margin: clamp(24px, 4vw, 40px) auto 10px;
   transform: none;
 }
 
@@ -6752,6 +6779,8 @@ main#story .story h2::before {
 }
 
 @media (max-width: 560px) {
+  .teaching-story-disclosure { margin-top: 28px; }
+  .teaching-story-disclosure > summary { width: 100%; justify-content: space-between; }
   .teaching-storybook { margin-top: 38px; }
   .storybook-intro { margin-inline: 4px; }
   .storybook-page { grid-template-columns: 1fr; min-height: 500px; padding: 18px; }
