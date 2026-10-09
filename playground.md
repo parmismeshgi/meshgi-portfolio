@@ -156,7 +156,7 @@ Open case study →](https://meshgi.com/chaashni/)
 
 [10 · Music
 
-![Postcards in Sound artwork for Spain, with a vinyl sun above a cobalt sea](https://postcards.meshgi.com/assets/spain.webp)
+![Postcards in Sound artwork for Spain, with a vinyl sun above a cobalt sea](https://meshgi.com/assets/playground/postcards.svg)
 
 Music · Live
 

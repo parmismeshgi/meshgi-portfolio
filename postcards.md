@@ -23,7 +23,7 @@ Help listeners move from a place they are curious about to music with context.
 
 [Explore the listening atlas ↗](https://postcards.meshgi.com/)
 
-![Spain illustrated as a vinyl sun above a cobalt sea and ochre landscape](https://postcards.meshgi.com/assets/spain.webp)
+![Spain illustrated as a vinyl sun above a cobalt sea and ochre landscape](https://meshgi.com/assets/playground/postcards.svg)
 
 My role Product direction and UX/UI
 
@@ -189,7 +189,7 @@ Measure whether listeners find a playlist, read a note, and start playback. Publ
 
 [
 
-![Postcards in Sound Spain artwork](https://postcards.meshgi.com/assets/spain.webp)
+![Postcards in Sound Spain artwork](https://meshgi.com/assets/playground/postcards.svg)
 
 Live product Open Postcards in Sound ↗](https://postcards.meshgi.com/)
 

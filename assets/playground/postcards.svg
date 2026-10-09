@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-labelledby="title">
+  <title id="title">Postcards in Sound: a vinyl sun above a blue sea</title>
+  <defs>
+    <clipPath id="card"><rect width="192" height="192" rx="38"/></clipPath>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="192" height="192" fill="#f5d7a0"/>
+    <path d="M0 117c34-18 56-20 87-6 32 15 68 13 105-9v90H0z" fill="#c7784d"/>
+    <path d="M0 136c34-13 63-15 96-5 36 11 62 7 96-10v71H0z" fill="#185db1"/>
+    <path d="M0 161c35-10 63-9 97-2 36 7 64 3 95-9v42H0z" fill="#124482"/>
+    <circle cx="105" cy="75" r="45" fill="#202024"/>
+    <circle cx="105" cy="75" r="30" fill="none" stroke="#686769" stroke-width="2"/>
+    <circle cx="105" cy="75" r="18" fill="#e99156"/>
+    <circle cx="105" cy="75" r="5" fill="#f5d7a0"/>
+  </g>
+</svg>
