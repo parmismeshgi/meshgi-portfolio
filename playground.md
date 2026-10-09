@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/playground/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-10-09"
 ---
 
 > Independent apps and web products designed and built by Toronto product designer Parmis Meshgi.
@@ -22,11 +22,11 @@ I direct each project from problem to product.
 
 AI helps me explore, build, and test faster. The product decisions remain mine.
 
-Products 9
+Products 10
 
 App Store 3 released apps
 
-Web 6 working products
+Web 7 working products
 
 Role Product direction, UX, UI, and build
 
@@ -154,6 +154,18 @@ A Persian recipe finder that begins with the cooking decision.
 
 Open case study →](https://meshgi.com/chaashni/)
 
+[10 · Music
+
+![Postcards in Sound artwork for Spain, with a vinyl sun above a cobalt sea](https://postcards.meshgi.com/assets/spain.webp)
+
+Music · Live
+
+### Postcards in Sound
+
+A listening atlas with place-based playlists, track notes, and regional context.
+
+Open case study →](https://meshgi.com/postcards/)
+
 Project timeline
 
 ## All projects, in time.
@@ -231,3 +243,11 @@ August 20, 2026
 #### [Fitness Website ↗](https://meshgi.com/fitness/)
 
 Day, Food, and Progress received one shared date pattern.
+
+- 10
+
+Live now
+
+#### [Postcards in Sound ↗](https://meshgi.com/postcards/)
+
+Nine place-based playlists connect regional discovery, listening notes, and Spotify playback.

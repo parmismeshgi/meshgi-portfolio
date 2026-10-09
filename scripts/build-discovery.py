@@ -35,6 +35,7 @@ PUBLIC_PAGES = [
     "hitchi",
     "rooydad",
     "chaashni",
+    "postcards",
     "photography",
     "resume",
     "teaching",
@@ -284,7 +285,7 @@ def build_llms(records: list[tuple[str, str, str]]) -> None:
     groups = [
         ("Main portfolio", ["index", "product-design", "restaurant-product-design", "ai-design-practice", "resume"]),
         ("Restaurant product work", ["kiosk", "bar-tabs", "backoffice", "pos"]),
-        ("Independent products", ["playground", "footsteps", "seej", "health-exporter", "family-tree", "fitness", "orange-institute", "hitchi", "rooydad", "chaashni"]),
+        ("Independent products", ["playground", "footsteps", "seej", "health-exporter", "family-tree", "fitness", "orange-institute", "hitchi", "rooydad", "chaashni", "postcards"]),
         ("Other practice", ["photography", "teaching"]),
     ]
     data = {slug: (title, description) for slug, title, description in records}

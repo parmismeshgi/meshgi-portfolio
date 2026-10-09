@@ -31,6 +31,7 @@ Use the Markdown links below for compact, text-first versions. Use the canonical
 - [Hitchi Product Design Case Study | Parmis Meshgi](/hitchi.md): Hitchi is a Persian music timeline card game and scanner designed by product designer Parmis Meshgi.
 - [Rooy.dad Product Design Case Study | Parmis Meshgi](/rooydad.md): Rooy.dad is a bilingual guide to Persian community events in Toronto, designed by Parmis Meshgi.
 - [Chaashni Product Design Case Study | Parmis Meshgi](/chaashni.md): Chaashni is a Persian recipe finder designed by product designer Parmis Meshgi.
+- [Postcards in Sound Product Design Case Study | Parmis Meshgi](/postcards.md): A listening atlas for place-based music, with regional filters, search, track notes, and curated playlists.
 
 ## Other practice
 

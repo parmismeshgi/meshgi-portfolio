@@ -3476,6 +3476,7 @@ main#story .story h2::before {
 .side-card-hitchi { --work-accent: #755d9a; --work-accent-rgb: 117, 93, 154; --work-tint: #ebe5f2; }
 .side-card-rooydad { --work-accent: #b7453e; --work-accent-rgb: 183, 69, 62; --work-tint: #f3e3df; }
 .side-card-chaashni { --work-accent: #a8662b; --work-accent-rgb: 168, 102, 43; --work-tint: #f3e9dc; }
+.side-card-postcards { --work-accent: #344f88; --work-accent-rgb: 52, 79, 136; --work-tint: #e5e9f2; }
 
 .pos-case-visual {
   display: grid;
