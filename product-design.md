@@ -15,8 +15,7 @@ Canonical page: [https://meshgi.com/product-design/](https://meshgi.com/product-
 
 Product design · Selected work
 
-# Complex systems.
-Clearer work.
+# Complex systems. Clearer work.
 
 I design software for the people who run restaurants.
 

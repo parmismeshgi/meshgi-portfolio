@@ -17,8 +17,7 @@ Canonical page: [https://meshgi.com/backoffice/](https://meshgi.com/backoffice/)
 
 Work 03 · Administration
 
-# Backoffice
-Menu Management
+# Backoffice Menu Management
 
 Administrators need clear structure when one menu change can affect many records, stores, and service channels.
 

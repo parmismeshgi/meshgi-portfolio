@@ -2,6 +2,52 @@ meshgi.com {
 	root * /opt/apps/meshgi-com/current
 	encode zstd gzip
 
+	# Explicit discovery links; responses never vary by Accept or User-Agent.
+	@discovery_index path / /index.md
+	header @discovery_index Link "<https://meshgi.com/>; rel=\"canonical\", <https://meshgi.com/index.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_product_design path /product-design/ /product-design.md
+	header @discovery_product_design Link "<https://meshgi.com/product-design/>; rel=\"canonical\", <https://meshgi.com/product-design.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_restaurant_product_design path /restaurant-product-design/ /restaurant-product-design.md
+	header @discovery_restaurant_product_design Link "<https://meshgi.com/restaurant-product-design/>; rel=\"canonical\", <https://meshgi.com/restaurant-product-design.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_ai_design_practice path /ai-design-practice/ /ai-design-practice.md
+	header @discovery_ai_design_practice Link "<https://meshgi.com/ai-design-practice/>; rel=\"canonical\", <https://meshgi.com/ai-design-practice.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_kiosk path /kiosk/ /kiosk.md
+	header @discovery_kiosk Link "<https://meshgi.com/kiosk/>; rel=\"canonical\", <https://meshgi.com/kiosk.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_bar_tabs path /bar-tabs/ /bar-tabs.md
+	header @discovery_bar_tabs Link "<https://meshgi.com/bar-tabs/>; rel=\"canonical\", <https://meshgi.com/bar-tabs.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_backoffice path /backoffice/ /backoffice.md
+	header @discovery_backoffice Link "<https://meshgi.com/backoffice/>; rel=\"canonical\", <https://meshgi.com/backoffice.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_pos path /pos/ /pos.md
+	header @discovery_pos Link "<https://meshgi.com/pos/>; rel=\"canonical\", <https://meshgi.com/pos.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_playground path /playground/ /playground.md
+	header @discovery_playground Link "<https://meshgi.com/playground/>; rel=\"canonical\", <https://meshgi.com/playground.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_footsteps path /footsteps/ /footsteps.md
+	header @discovery_footsteps Link "<https://meshgi.com/footsteps/>; rel=\"canonical\", <https://meshgi.com/footsteps.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_seej path /seej/ /seej.md
+	header @discovery_seej Link "<https://meshgi.com/seej/>; rel=\"canonical\", <https://meshgi.com/seej.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_health_exporter path /health-exporter/ /health-exporter.md
+	header @discovery_health_exporter Link "<https://meshgi.com/health-exporter/>; rel=\"canonical\", <https://meshgi.com/health-exporter.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_family_tree path /family-tree/ /family-tree.md
+	header @discovery_family_tree Link "<https://meshgi.com/family-tree/>; rel=\"canonical\", <https://meshgi.com/family-tree.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_fitness path /fitness/ /fitness.md
+	header @discovery_fitness Link "<https://meshgi.com/fitness/>; rel=\"canonical\", <https://meshgi.com/fitness.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_orange_institute path /orange-institute/ /orange-institute.md
+	header @discovery_orange_institute Link "<https://meshgi.com/orange-institute/>; rel=\"canonical\", <https://meshgi.com/orange-institute.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_hitchi path /hitchi/ /hitchi.md
+	header @discovery_hitchi Link "<https://meshgi.com/hitchi/>; rel=\"canonical\", <https://meshgi.com/hitchi.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_rooydad path /rooydad/ /rooydad.md
+	header @discovery_rooydad Link "<https://meshgi.com/rooydad/>; rel=\"canonical\", <https://meshgi.com/rooydad.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_chaashni path /chaashni/ /chaashni.md
+	header @discovery_chaashni Link "<https://meshgi.com/chaashni/>; rel=\"canonical\", <https://meshgi.com/chaashni.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_postcards path /postcards/ /postcards.md
+	header @discovery_postcards Link "<https://meshgi.com/postcards/>; rel=\"canonical\", <https://meshgi.com/postcards.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_photography path /photography/ /photography.md
+	header @discovery_photography Link "<https://meshgi.com/photography/>; rel=\"canonical\", <https://meshgi.com/photography.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_resume path /resume/ /resume.md
+	header @discovery_resume Link "<https://meshgi.com/resume/>; rel=\"canonical\", <https://meshgi.com/resume.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+	@discovery_teaching path /teaching/ /teaching.md
+	header @discovery_teaching Link "<https://meshgi.com/teaching/>; rel=\"canonical\", <https://meshgi.com/teaching.md>; rel=\"alternate\"; type=\"text/markdown\", <https://meshgi.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+
 	@markdown path *.md
 	header @markdown Content-Type "text/markdown; charset=utf-8"
 	header @markdown X-Robots-Tag "noindex, follow"

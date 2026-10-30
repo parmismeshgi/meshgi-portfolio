@@ -17,8 +17,7 @@ Canonical page: [https://meshgi.com/bar-tabs/](https://meshgi.com/bar-tabs/)
 
 Work 02 · Service
 
-# Bar Tabs &
-Table Service
+# Bar Tabs & Table Service
 
 Staff need one clear place to find a tab, understand its state, and take the next action.
 

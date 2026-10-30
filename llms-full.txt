@@ -23,9 +23,7 @@ Canonical page: [https://meshgi.com/](https://meshgi.com/)
 
 Parmis Meshgi · Product designer
 
-# I think like a dev,
-design like a designer,
-and plan like a product manager!
+# I think like a dev, design like a designer, and plan like a product manager!
 
 Senior product designer in Toronto, working across product strategy, UX, UI, and complex software systems.
 
@@ -44,7 +42,7 @@ POS SERVICES](https://meshgi.com/product-design/)
 
 ![A cut-paper portrait of Parmis as a photographer](https://meshgi.com/assets/hero/photography-body.png)
 
-[](https://meshgi.com/photography/)
+[Open photography](https://meshgi.com/photography/)
 
 02 Photographer
 
@@ -52,7 +50,7 @@ POS SERVICES](https://meshgi.com/product-design/)
 
 ![A cut-paper portrait of Parmis with personal project patches](https://meshgi.com/assets/hero/playground-body.png)
 
-[](https://meshgi.com/playground/)
+[Open the side projects](https://meshgi.com/playground/)
 
 03 Side quests
 
@@ -64,7 +62,7 @@ Platform
 
 ![A cut-paper portrait of Parmis as a teacher](https://meshgi.com/assets/hero/teacher-body.png)
 
-[](https://meshgi.com/teaching/)
+[Open Orange Teaching Platform](https://meshgi.com/teaching/)
 
 04 Teacher
 
@@ -168,8 +166,7 @@ Canonical page: [https://meshgi.com/product-design/](https://meshgi.com/product-
 
 Product design · Selected work
 
-# Complex systems.
-Clearer work.
+# Complex systems. Clearer work.
 
 I design software for the people who run restaurants.
 
@@ -291,8 +288,7 @@ Canonical page: [https://meshgi.com/restaurant-product-design/](https://meshgi.c
 
 For product design hiring teams
 
-# Restaurant problems.
-Evidence to release.
+# Restaurant problems. Evidence to release.
 
 I design restaurant software with the people who use it, then stay close through testing, implementation, and release.
 
@@ -430,8 +426,7 @@ Canonical page: [https://meshgi.com/ai-design-practice/](https://meshgi.com/ai-d
 
 AI design practice
 
-# More context.
-Less repeated work.
+# More context. Less repeated work.
 
 I use AI to read the real sources, test more directions, build working prototypes, and keep decisions available after a project ends.
 
@@ -545,9 +540,7 @@ Shipped, partial, proposed, and unmeasured work keep separate labels.
 
 Recorded practice
 
-## 7 platforms studied.
-47 design versions.
-200 users tested.
+## 7 platforms studied. 47 design versions. 200 users tested.
 
 These numbers come from my April 2026 design Town Hall. They describe the work behind one polished screen.
 
@@ -577,8 +570,7 @@ Canonical page: [https://meshgi.com/kiosk/](https://meshgi.com/kiosk/)
 
 Work 01 · Self-service
 
-# Self-service
-Kiosk
+# Self-service Kiosk
 
 Self-service ordering must explain each choice, respond to physical input, and recover without staff help.
 
@@ -786,8 +778,7 @@ Canonical page: [https://meshgi.com/bar-tabs/](https://meshgi.com/bar-tabs/)
 
 Work 02 · Service
 
-# Bar Tabs &
-Table Service
+# Bar Tabs & Table Service
 
 Staff need one clear place to find a tab, understand its state, and take the next action.
 
@@ -977,8 +968,7 @@ Canonical page: [https://meshgi.com/backoffice/](https://meshgi.com/backoffice/)
 
 Work 03 · Administration
 
-# Backoffice
-Menu Management
+# Backoffice Menu Management
 
 Administrators need clear structure when one menu change can affect many records, stores, and service channels.
 
@@ -1162,8 +1152,7 @@ Canonical page: [https://meshgi.com/pos/](https://meshgi.com/pos/)
 
 Work 04 · Core platform
 
-# Point of
-Sale
+# Point of Sale
 
 I built responsive rules for the screens that move a restaurant from login to payment.
 
@@ -1359,8 +1348,7 @@ Canonical page: [https://meshgi.com/playground/](https://meshgi.com/playground/)
 
 Personal products · 2026
 
-# Curiosity starts it.
-AI expands what I can make.
+# Curiosity starts it. AI expands what I can make.
 
 I direct each project from problem to product.
 
@@ -1992,8 +1980,7 @@ Canonical page: [https://meshgi.com/health-exporter/](https://meshgi.com/health-
 
 Independent product · iOS
 
-# Health
-Exporter
+# Health Exporter
 
 Move the Apple Health data you choose, on your terms.
 
@@ -2179,8 +2166,7 @@ Canonical page: [https://meshgi.com/family-tree/](https://meshgi.com/family-tree
 
 Independent product · Web
 
-# Family
-Tree
+# Family Tree
 
 Help relatives understand a large family while protecting private profiles.
 
@@ -3616,8 +3602,7 @@ Canonical page: [https://meshgi.com/resume/](https://meshgi.com/resume/)
 
 Resume · Senior product designer
 
-# Experience,
-plainly stated.
+# Experience, plainly stated.
 
 Read the full one-page resume below. You can also open or download the PDF.
 

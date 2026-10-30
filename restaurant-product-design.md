@@ -17,8 +17,7 @@ Canonical page: [https://meshgi.com/restaurant-product-design/](https://meshgi.c
 
 For product design hiring teams
 
-# Restaurant problems.
-Evidence to release.
+# Restaurant problems. Evidence to release.
 
 I design restaurant software with the people who use it, then stay close through testing, implementation, and release.
 

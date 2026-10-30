@@ -15,8 +15,7 @@ Canonical page: [https://meshgi.com/resume/](https://meshgi.com/resume/)
 
 Resume · Senior product designer
 
-# Experience,
-plainly stated.
+# Experience, plainly stated.
 
 Read the full one-page resume below. You can also open or download the PDF.
 

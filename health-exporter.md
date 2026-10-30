@@ -17,8 +17,7 @@ Canonical page: [https://meshgi.com/health-exporter/](https://meshgi.com/health-
 
 Independent product · iOS
 
-# Health
-Exporter
+# Health Exporter
 
 Move the Apple Health data you choose, on your terms.
 

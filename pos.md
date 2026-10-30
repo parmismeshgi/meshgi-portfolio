@@ -17,8 +17,7 @@ Canonical page: [https://meshgi.com/pos/](https://meshgi.com/pos/)
 
 Work 04 · Core platform
 
-# Point of
-Sale
+# Point of Sale
 
 I built responsive rules for the screens that move a restaurant from login to payment.
 

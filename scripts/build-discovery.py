@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import html
 import json
 import re
@@ -86,7 +87,8 @@ class MarkdownParser(HTMLParser):
         self.base_url = base_url
         self.parts: list[str] = []
         self.skip_depth = 0
-        self.active_links: list[str] = []
+        self.active_links: list[tuple[str, str, int]] = []
+        self.in_heading = False
 
     @staticmethod
     def _attrs(attrs: list[tuple[str, str | None]]) -> dict[str, str]:
@@ -119,13 +121,14 @@ class MarkdownParser(HTMLParser):
         if tag in {f"h{level}" for level in range(1, 7)}:
             self._line_break()
             self.parts.append("#" * int(tag[1]) + " ")
+            self.in_heading = True
         elif tag == "li":
             self._line_break()
             self.parts.append("- ")
         elif tag == "br":
-            self.parts.append("  \n")
+            self.parts.append(" " if self.in_heading else "  \n")
         elif tag == "a":
-            self.active_links.append(values.get("href", ""))
+            self.active_links.append((values.get("href", ""), values.get("aria-label", ""), len(self.parts)))
             self.parts.append("[")
         elif tag == "img":
             alt = values.get("alt", "").strip()
@@ -142,12 +145,16 @@ class MarkdownParser(HTMLParser):
             self.skip_depth -= 1
             return
         if tag == "a" and self.active_links:
-            href = self.active_links.pop()
+            href, label, start = self.active_links.pop()
+            if not "".join(self.parts[start + 1:]).strip() and label:
+                self.parts.append(label)
             if href:
                 href = clean_link(href)
                 self.parts.append(f"]({urljoin(self.base_url, href)})")
             else:
                 self.parts.append("]")
+        if tag in {f"h{level}" for level in range(1, 7)}:
+            self.in_heading = False
         if tag in self.BLOCKS or tag in {f"h{level}" for level in range(1, 7)} or tag == "li":
             self._line_break()
 
@@ -165,7 +172,6 @@ class MarkdownParser(HTMLParser):
         value = "".join(self.parts)
         value = re.sub(r"[ \t]+\n", "\n", value)
         value = re.sub(r"\n{3,}", "\n\n", value)
-        value = value.replace("\u2014", ",")
         return value.strip() + "\n"
 
 
@@ -234,7 +240,16 @@ def update_html(slug: str) -> tuple[str, str]:
     return parser.title.strip(), parser.description.strip()
 
 
-def make_markdown(slug: str, title: str, description: str) -> str:
+def existing_updated_date(slug: str) -> str:
+    path = ROOT / f"{slug}.md"
+    if path.exists():
+        match = re.search(r'^last_updated: "(\d{4}-\d{2}-\d{2})"$', path.read_text(encoding="utf-8"), re.M)
+        if match:
+            return match.group(1)
+    return TODAY
+
+
+def make_markdown(slug: str, title: str, description: str, *, preserve_date: bool = False) -> str:
     source = (ROOT / f"{slug}.html").read_text(encoding="utf-8")
     parser = MarkdownParser(absolute_route(slug))
     parser.feed(source)
@@ -247,7 +262,7 @@ def make_markdown(slug: str, title: str, description: str) -> str:
         "author": "Parmis Meshgi",
         "location": "Toronto, Canada",
         "language": "en-CA",
-        "last_updated": TODAY,
+        "last_updated": existing_updated_date(slug) if preserve_date else TODAY,
     }
     lines = ["---"]
     for key, value in frontmatter.items():
@@ -320,17 +335,27 @@ def build_llms(records: list[tuple[str, str, str]]) -> None:
 
 
 def main() -> None:
+    args = argparse.ArgumentParser(description=__doc__)
+    args.add_argument("--markdown-only", action="store_true",
+                      help="Refresh text exports without rewriting HTML, routes or sitemap dates")
+    options = args.parse_args()
     records = []
     for slug in PUBLIC_PAGES:
-        title, description = update_html(slug)
+        if options.markdown_only:
+            metadata = MetadataParser()
+            metadata.feed((ROOT / f"{slug}.html").read_text(encoding="utf-8"))
+            title, description = metadata.title.strip(), metadata.description.strip()
+        else:
+            title, description = update_html(slug)
         records.append((slug, title, description))
     for slug, title, description in records:
-        (ROOT / f"{slug}.md").write_text(make_markdown(slug, title, description), encoding="utf-8")
-        if slug not in {"index", "photography"}:
+        (ROOT / f"{slug}.md").write_text(make_markdown(slug, title, description, preserve_date=options.markdown_only), encoding="utf-8")
+        if not options.markdown_only and slug not in {"index", "photography"}:
             route_dir = ROOT / slug
             route_dir.mkdir(exist_ok=True)
             (route_dir / "index.html").write_text((ROOT / f"{slug}.html").read_text(encoding="utf-8"), encoding="utf-8")
-    build_sitemap()
+    if not options.markdown_only:
+        build_sitemap()
     build_llms(records)
 
 

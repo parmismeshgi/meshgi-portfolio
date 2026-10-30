@@ -15,9 +15,7 @@ Canonical page: [https://meshgi.com/](https://meshgi.com/)
 
 Parmis Meshgi · Product designer
 
-# I think like a dev,
-design like a designer,
-and plan like a product manager!
+# I think like a dev, design like a designer, and plan like a product manager!
 
 Senior product designer in Toronto, working across product strategy, UX, UI, and complex software systems.
 
@@ -36,7 +34,7 @@ POS SERVICES](https://meshgi.com/product-design/)
 
 ![A cut-paper portrait of Parmis as a photographer](https://meshgi.com/assets/hero/photography-body.png)
 
-[](https://meshgi.com/photography/)
+[Open photography](https://meshgi.com/photography/)
 
 02 Photographer
 
@@ -44,7 +42,7 @@ POS SERVICES](https://meshgi.com/product-design/)
 
 ![A cut-paper portrait of Parmis with personal project patches](https://meshgi.com/assets/hero/playground-body.png)
 
-[](https://meshgi.com/playground/)
+[Open the side projects](https://meshgi.com/playground/)
 
 03 Side quests
 
@@ -56,7 +54,7 @@ Platform
 
 ![A cut-paper portrait of Parmis as a teacher](https://meshgi.com/assets/hero/teacher-body.png)
 
-[](https://meshgi.com/teaching/)
+[Open Orange Teaching Platform](https://meshgi.com/teaching/)
 
 04 Teacher
 

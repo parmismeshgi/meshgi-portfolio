@@ -159,9 +159,9 @@ if (kioskExperience) {
     <header class="kiosk-live-header">
       <button class="kiosk-live-exit" type="button" data-kiosk-action="exit">Exit Order</button>
       <div class="kiosk-live-header-icons" aria-label="Kiosk tools">
-        <button type="button" data-kiosk-action="health-help" aria-label="Nutritional information"><img src="assets/kiosk-demo/health.svg" alt=""></button>
-        <button type="button" data-kiosk-action="account" aria-label="Customer options"><img src="assets/kiosk-demo/account.svg" alt=""></button>
-        <button type="button" data-kiosk-action="scan" aria-label="Scan item, customer, or coupon"><img src="assets/kiosk-demo/barcode.svg" alt=""></button>
+        <button type="button" data-kiosk-action="health-help" aria-label="Nutritional information"><img src="/assets/kiosk-demo/health.svg" alt=""></button>
+        <button type="button" data-kiosk-action="account" aria-label="Customer options"><img src="/assets/kiosk-demo/account.svg" alt=""></button>
+        <button type="button" data-kiosk-action="scan" aria-label="Scan item, customer, or coupon"><img src="/assets/kiosk-demo/barcode.svg" alt=""></button>
       </div>
     </header>`;
 
@@ -195,10 +195,10 @@ if (kioskExperience) {
         ${state.accessibilityOpen ? `
           <button class="kiosk-live-accessibility-backdrop" type="button" data-kiosk-action="accessibility-close" aria-label="Close accessibility options"></button>
           <button class="kiosk-live-access-option" type="button" data-kiosk-action="contrast" aria-pressed="${state.highContrast}">
-            <img src="assets/kiosk-demo/high-contrast.svg" alt=""><span>High Contrast</span>
+            <img src="/assets/kiosk-demo/high-contrast.svg" alt=""><span>High Contrast</span>
           </button>` : ""}
         <button class="kiosk-live-accessibility ${state.accessibilityOpen ? "is-expanded" : ""}" type="button" data-kiosk-action="accessibility" aria-expanded="${state.accessibilityOpen}">
-          <img src="assets/kiosk-demo/accessibility.svg" alt=""><strong>Accessibility</strong>
+          <img src="/assets/kiosk-demo/accessibility.svg" alt=""><strong>Accessibility</strong>
         </button>
       </section>`;
   };

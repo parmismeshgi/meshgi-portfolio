@@ -15,8 +15,7 @@ Canonical page: [https://meshgi.com/playground/](https://meshgi.com/playground/)
 
 Personal products · 2026
 
-# Curiosity starts it.
-AI expands what I can make.
+# Curiosity starts it. AI expands what I can make.
 
 I direct each project from problem to product.
 

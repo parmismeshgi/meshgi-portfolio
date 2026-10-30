@@ -17,8 +17,7 @@ Canonical page: [https://meshgi.com/family-tree/](https://meshgi.com/family-tree
 
 Independent product · Web
 
-# Family
-Tree
+# Family Tree
 
 Help relatives understand a large family while protecting private profiles.
 

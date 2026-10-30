@@ -17,8 +17,7 @@ Canonical page: [https://meshgi.com/kiosk/](https://meshgi.com/kiosk/)
 
 Work 01 · Self-service
 
-# Self-service
-Kiosk
+# Self-service Kiosk
 
 Self-service ordering must explain each choice, respond to physical input, and recover without staff help.
 

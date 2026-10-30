@@ -17,8 +17,7 @@ Canonical page: [https://meshgi.com/ai-design-practice/](https://meshgi.com/ai-d
 
 AI design practice
 
-# More context.
-Less repeated work.
+# More context. Less repeated work.
 
 I use AI to read the real sources, test more directions, build working prototypes, and keep decisions available after a project ends.
 
@@ -132,9 +131,7 @@ Shipped, partial, proposed, and unmeasured work keep separate labels.
 
 Recorded practice
 
-## 7 platforms studied.
-47 design versions.
-200 users tested.
+## 7 platforms studied. 47 design versions. 200 users tested.
 
 These numbers come from my April 2026 design Town Hall. They describe the work behind one polished screen.
 
