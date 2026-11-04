@@ -157,7 +157,7 @@ html_url: "https://meshgi.com/product-design/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > Product design case studies by Toronto senior product designer Parmis Meshgi across Kiosk, Bar Tabs, Backoffice, and POS.
@@ -218,7 +218,7 @@ POS · Released and evolving
 
 ### Bar Tabs
 
-Running bills, permissions, payment states, ownership, and recovery during a busy shift.
+Follow 15 staff interviews, a changed bill-splitting design, team handoff, and the first release.
 
 Open case study →](https://meshgi.com/bar-tabs/)
 
@@ -264,7 +264,6 @@ I start with the problem. I study the system, speak with its users, explore dire
 
 AI speeds up research and production. Design judgment, source checks, and final decisions stay with the team.
 
-
 ---
 
 # Page: Restaurant Product Design Practice | Parmis Meshgi
@@ -277,7 +276,7 @@ html_url: "https://meshgi.com/restaurant-product-design/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > A hiring guide to Parmis Meshgi's restaurant product design work across research, prototypes, testing, delivery, AI, and design systems.
@@ -352,21 +351,21 @@ The shared POS keyboard, responsive guidance, Menu Management components, and na
 
 [See the component decisions →](https://meshgi.com/backoffice/#decisions)
 
-07 · Critique
+07 · Iteration
 
-### Show unfinished work
+### Show what changed
 
-The Quick Menu record keeps rejected directions, critique notes, and the reason version six won. The case studies explain tradeoffs, limits, and open measures.
+Bar Tabs shows how expert feedback changed bill splitting. Kiosk shows five concepts, hardware testing, team voting, and the chosen rule.
 
-[See the iteration record →](https://meshgi.com/backoffice/#decisions)
+[See a decision change →](https://meshgi.com/bar-tabs/#decisions)
 
-08 · Shipping
+08 · Results
 
-### Separate release from intent
+### Separate scale from impact
 
-Every case study labels released, partial, proposed, and unmeasured work. Kiosk and POS include dated production footprints.
+The case studies name released work and open measures. Kiosk and POS report dated product scale without claiming that one design caused it.
 
-[See the release evidence →](https://meshgi.com/kiosk/#result)
+[See the result boundary →](https://meshgi.com/kiosk/#result)
 
 Suggested reading path
 
@@ -401,7 +400,6 @@ Open case study →](https://meshgi.com/pos/)
 This guide follows the role focus in the[7shifts Product Designer posting](https://job-boards.greenhouse.io/7shifts/jobs/4832851004) , reviewed September 29, 2026.
 
 [Open my resume →](https://meshgi.com/resume/)
-
 
 ---
 
@@ -559,7 +557,7 @@ html_url: "https://meshgi.com/kiosk/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-10-01"
+last_updated: "2026-11-04"
 ---
 
 > A self-service Kiosk UX and product design case study by senior product designer Parmis Meshgi.
@@ -606,7 +604,7 @@ Product at scale
 
 49.5% Of Volanté transaction volume
 
-Volanté platform data from January 1 to September 14, 2026.
+Volanté platform data from January 1 to September 14, 2026. These numbers describe product scale, not the effect of one design change.
 
 Project value
 
@@ -696,6 +694,28 @@ Intended impact
 
 Customers can recover without guessing what the kiosk expects.
 
+One control, full process
+
+## We tested the quantity control at its real size.
+
+We printed the options, placed them on the kiosk, and asked people to try them at the device.
+
+### 01 · Explore: Five first ideas
+
+We compared five quantity-selector concepts and refined them into eight versions.
+
+### 02 · Test: Paper on the kiosk
+
+Participants saw each printed version on the device, received the same neutral task, and voted privately.
+
+### 03 · Decide together: Discuss the top three
+
+I brought the leading options to the product team for discussion and a second vote.
+
+### 04 · Ship a rule: Keep quantity in one place
+
+The selected behavior shows quantity when the minimum exceeds one. A second tile tap keeps the selection, and quantity changes stay on the main screen.
+
 Interactive product
 
 ## Use the self-service Kiosk.
@@ -754,7 +774,6 @@ A production review found 19 related defects. Sixteen reached completion.
 
 [Next work project Bar Tabs →](https://meshgi.com/bar-tabs/)
 
-
 ---
 
 # Page: Bar Tabs UX Case Study | Parmis Meshgi
@@ -767,7 +786,7 @@ html_url: "https://meshgi.com/bar-tabs/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > A Bar Tabs and Table Service UX and product design case study by senior product designer Parmis Meshgi.
@@ -902,6 +921,28 @@ Intended impact
 
 The spatial view uses the same service rules instead of creating a separate system.
 
+How the work changed
+
+## A service problem became a testable system.
+
+The research changed both the overview and a bill-splitting idea. I kept the tested design separate from released work.
+
+### 01 · Learn: Watch the shift
+
+I interviewed 15 waitstaff and managers, compared ten products, and worked behind a bar. The research exposed search, ownership, and bill-splitting problems.
+
+### 02 · Change: Make the action explicit
+
+An expert review flagged the learning cost of dragging items between bills. I changed the split design to select and assign items. This remains design work.
+
+### 03 · Work together: Connect design to stories
+
+I led the flows and sent 17 design links and a prototype to product. Another designer built the shared kit. Product, engineering, and quality assurance reviewed the release.
+
+### 04 · Release: Ship the first scope
+
+The first Bar Tabs release delivered the visualizer and core tab actions. Table Service and several later actions remain separate work.
+
 Product proof
 
 ## The service model works from tab overview to floor planning.
@@ -940,10 +981,11 @@ Measure next
 
 Future measures include recall success, closing time, permission failures, and recovery completion.
 
+The release is verified. Usage, adoption, and task-completion results have not been measured here.
+
 [Work index See all product design work →](https://meshgi.com/product-design/)
 
 [Next work project Backoffice →](https://meshgi.com/backoffice/)
-
 
 ---
 
@@ -957,7 +999,7 @@ html_url: "https://meshgi.com/backoffice/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > A Backoffice Menu Management UX and product design case study by senior product designer Parmis Meshgi.
@@ -1092,6 +1134,28 @@ Intended impact
 
 Engineering receives useful guidance without waiting for a complete system rewrite.
 
+A decision after feedback
+
+## A row needed one predictable action.
+
+Engineering read an early navigation rule two ways. I compared five interactions and wrote the rule that the team could build.
+
+### 01 · Find the gap: One phrase, two meanings
+
+"Double-click to navigate" could mean a second click on a selected row or a true double-click.
+
+### 02 · Compare: Five interactions
+
+I evaluated five options and compared patterns in four administration products. A second implicit click would conflict with interactive columns and later inline editing.
+
+### 03 · Decide: Separate preview from detail
+
+One click selects and previews. The arrow and See Details open the full page. The team rejected both second-click and double-click navigation.
+
+### 04 · Align: Write the rule for reuse
+
+I recorded the decision for product and front-end work. The same behavior applies across Menu Management tables.
+
 Product proof
 
 ## The grid makes scanning, selection, and connected data visible.
@@ -1124,10 +1188,11 @@ Measure next
 
 Future measures include bulk completion, navigation errors, and time to find an item.
 
+Delivery is documented in stages. The portfolio has no verified task-time or error-rate result for this redesign.
+
 [Work index See all product design work →](https://meshgi.com/product-design/)
 
 [Next work project POS →](https://meshgi.com/pos/)
-
 
 ---
 
@@ -1141,7 +1206,7 @@ html_url: "https://meshgi.com/pos/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > A responsive point-of-sale UX and product design case study by senior product designer Parmis Meshgi.
@@ -1188,7 +1253,7 @@ Product at scale
 
 50.4% Of Volanté transaction volume
 
-Volanté Product Specialist data from January 1 to September 14, 2026. The active footprint covers 422 live locations.
+Volanté Product Specialist data from January 1 to September 14, 2026. The active footprint covers 422 live locations. These numbers describe product scale, not the effect of one design change.
 
 Project value
 
@@ -1325,7 +1390,6 @@ The placement study guided search position, button behavior, and suggestions.
 [Work index See all product design work →](https://meshgi.com/product-design/)
 
 [Return to all work Work index →](https://meshgi.com/product-design/)
-
 
 ---
 

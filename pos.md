@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/pos/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > A responsive point-of-sale UX and product design case study by senior product designer Parmis Meshgi.
@@ -53,7 +53,7 @@ Product at scale
 
 50.4% Of Volanté transaction volume
 
-Volanté Product Specialist data from January 1 to September 14, 2026. The active footprint covers 422 live locations.
+Volanté Product Specialist data from January 1 to September 14, 2026. The active footprint covers 422 live locations. These numbers describe product scale, not the effect of one design change.
 
 Project value
 

@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/kiosk/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-10-01"
+last_updated: "2026-11-04"
 ---
 
 > A self-service Kiosk UX and product design case study by senior product designer Parmis Meshgi.
@@ -53,7 +53,7 @@ Product at scale
 
 49.5% Of Volanté transaction volume
 
-Volanté platform data from January 1 to September 14, 2026.
+Volanté platform data from January 1 to September 14, 2026. These numbers describe product scale, not the effect of one design change.
 
 Project value
 
@@ -142,6 +142,28 @@ The scale flow now covers placing food, lifting it, holding still, capture, and 
 Intended impact
 
 Customers can recover without guessing what the kiosk expects.
+
+One control, full process
+
+## We tested the quantity control at its real size.
+
+We printed the options, placed them on the kiosk, and asked people to try them at the device.
+
+### 01 · Explore: Five first ideas
+
+We compared five quantity-selector concepts and refined them into eight versions.
+
+### 02 · Test: Paper on the kiosk
+
+Participants saw each printed version on the device, received the same neutral task, and voted privately.
+
+### 03 · Decide together: Discuss the top three
+
+I brought the leading options to the product team for discussion and a second vote.
+
+### 04 · Ship a rule: Keep quantity in one place
+
+The selected behavior shows quantity when the minimum exceeds one. A second tile tap keeps the selection, and quantity changes stay on the main screen.
 
 Interactive product
 

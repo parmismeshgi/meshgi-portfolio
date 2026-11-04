@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/restaurant-product-design/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > A hiring guide to Parmis Meshgi's restaurant product design work across research, prototypes, testing, delivery, AI, and design systems.
@@ -81,21 +81,21 @@ The shared POS keyboard, responsive guidance, Menu Management components, and na
 
 [See the component decisions →](https://meshgi.com/backoffice/#decisions)
 
-07 · Critique
+07 · Iteration
 
-### Show unfinished work
+### Show what changed
 
-The Quick Menu record keeps rejected directions, critique notes, and the reason version six won. The case studies explain tradeoffs, limits, and open measures.
+Bar Tabs shows how expert feedback changed bill splitting. Kiosk shows five concepts, hardware testing, team voting, and the chosen rule.
 
-[See the iteration record →](https://meshgi.com/backoffice/#decisions)
+[See a decision change →](https://meshgi.com/bar-tabs/#decisions)
 
-08 · Shipping
+08 · Results
 
-### Separate release from intent
+### Separate scale from impact
 
-Every case study labels released, partial, proposed, and unmeasured work. Kiosk and POS include dated production footprints.
+The case studies name released work and open measures. Kiosk and POS report dated product scale without claiming that one design caused it.
 
-[See the release evidence →](https://meshgi.com/kiosk/#result)
+[See the result boundary →](https://meshgi.com/kiosk/#result)
 
 Suggested reading path
 

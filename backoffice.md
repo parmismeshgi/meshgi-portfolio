@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/backoffice/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > A Backoffice Menu Management UX and product design case study by senior product designer Parmis Meshgi.
@@ -141,6 +141,28 @@ Intended impact
 
 Engineering receives useful guidance without waiting for a complete system rewrite.
 
+A decision after feedback
+
+## A row needed one predictable action.
+
+Engineering read an early navigation rule two ways. I compared five interactions and wrote the rule that the team could build.
+
+### 01 · Find the gap: One phrase, two meanings
+
+"Double-click to navigate" could mean a second click on a selected row or a true double-click.
+
+### 02 · Compare: Five interactions
+
+I evaluated five options and compared patterns in four administration products. A second implicit click would conflict with interactive columns and later inline editing.
+
+### 03 · Decide: Separate preview from detail
+
+One click selects and previews. The arrow and See Details open the full page. The team rejected both second-click and double-click navigation.
+
+### 04 · Align: Write the rule for reuse
+
+I recorded the decision for product and front-end work. The same behavior applies across Menu Management tables.
+
 Product proof
 
 ## The grid makes scanning, selection, and connected data visible.
@@ -172,6 +194,8 @@ Measure next
 ### Administration signals
 
 Future measures include bulk completion, navigation errors, and time to find an item.
+
+Delivery is documented in stages. The portfolio has no verified task-time or error-rate result for this redesign.
 
 [Work index See all product design work →](https://meshgi.com/product-design/)
 

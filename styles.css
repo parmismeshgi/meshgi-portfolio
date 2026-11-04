@@ -4275,6 +4275,75 @@ main#story .story h2::before {
   text-transform: uppercase;
 }
 
+.case-decision-story {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(32px, 5vw, 72px);
+  margin-top: 64px;
+  padding: clamp(28px, 4vw, 48px);
+  background: var(--case-tint);
+  border: 1px solid var(--case-line);
+  border-radius: 28px;
+}
+
+.case-decision-story-head h3 {
+  margin: 16px 0 20px;
+  font: 400 clamp(38px, 4vw, 58px)/1 var(--serif);
+  letter-spacing: -0.035em;
+}
+
+.case-decision-story-head > p:last-child {
+  max-width: 34ch;
+  margin: 0;
+  color: #514b43;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.case-decision-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-decision-steps li {
+  min-width: 0;
+  padding: 18px 0 24px;
+  border-top: 1px solid var(--case-line);
+}
+
+.case-decision-steps li > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--case-accent);
+  font: 600 10px/1.4 var(--mono);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.case-decision-steps h4 {
+  margin: 0 0 10px;
+  font: 600 19px/1.2 var(--sans);
+}
+
+.case-decision-steps p {
+  margin: 0;
+  color: #514b43;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.case-result-note {
+  max-width: 70ch;
+  margin: 28px 0 0;
+  color: #514b43;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .value-product-section {
   width: 100%;
   padding-inline: max(24px, calc((100vw - 1240px) / 2));
@@ -5088,6 +5157,8 @@ main#story .story h2::before {
 
 @media (max-width: 900px) {
   .value-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr); }
+  .case-decision-story { grid-template-columns: 1fr; }
+  .case-decision-story-head > p:last-child { max-width: 58ch; }
   .value-summary { grid-template-columns: 1fr 1fr; }
   .value-summary > div:nth-child(2) { border-right: 0; }
   .value-summary > div:nth-child(-n + 2) { border-bottom: 1px solid var(--case-line); }
@@ -5156,6 +5227,8 @@ main#story .story h2::before {
 }
 
 @media (max-width: 520px) {
+  .case-decision-story { margin-top: 44px; padding: 26px; }
+  .case-decision-steps { grid-template-columns: 1fr; }
   .value-hero-copy h1 { font-size: clamp(62px, 20vw, 78px); }
   .work-value-case .value-hero-copy h1 { font-size: clamp(54px, 16vw, 72px); }
   .value-hero-lead { max-width: 100%; font-size: 25px; }

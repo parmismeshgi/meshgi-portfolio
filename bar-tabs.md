@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/bar-tabs/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > A Bar Tabs and Table Service UX and product design case study by senior product designer Parmis Meshgi.
@@ -141,6 +141,28 @@ Intended impact
 
 The spatial view uses the same service rules instead of creating a separate system.
 
+How the work changed
+
+## A service problem became a testable system.
+
+The research changed both the overview and a bill-splitting idea. I kept the tested design separate from released work.
+
+### 01 · Learn: Watch the shift
+
+I interviewed 15 waitstaff and managers, compared ten products, and worked behind a bar. The research exposed search, ownership, and bill-splitting problems.
+
+### 02 · Change: Make the action explicit
+
+An expert review flagged the learning cost of dragging items between bills. I changed the split design to select and assign items. This remains design work.
+
+### 03 · Work together: Connect design to stories
+
+I led the flows and sent 17 design links and a prototype to product. Another designer built the shared kit. Product, engineering, and quality assurance reviewed the release.
+
+### 04 · Release: Ship the first scope
+
+The first Bar Tabs release delivered the visualizer and core tab actions. Table Service and several later actions remain separate work.
+
 Product proof
 
 ## The service model works from tab overview to floor planning.
@@ -178,6 +200,8 @@ Measure next
 ### Service signals
 
 Future measures include recall success, closing time, permission failures, and recovery completion.
+
+The release is verified. Usage, adoption, and task-completion results have not been measured here.
 
 [Work index See all product design work →](https://meshgi.com/product-design/)
 

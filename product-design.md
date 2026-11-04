@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/product-design/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-09-29"
+last_updated: "2026-11-04"
 ---
 
 > Product design case studies by Toronto senior product designer Parmis Meshgi across Kiosk, Bar Tabs, Backoffice, and POS.
@@ -67,7 +67,7 @@ POS · Released and evolving
 
 ### Bar Tabs
 
-Running bills, permissions, payment states, ownership, and recovery during a busy shift.
+Follow 15 staff interviews, a changed bill-splitting design, team handoff, and the first release.
 
 Open case study →](https://meshgi.com/bar-tabs/)
 
