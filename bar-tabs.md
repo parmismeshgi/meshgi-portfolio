@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/bar-tabs/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-11-04"
+last_updated: "2026-11-06"
 ---
 
 > A Bar Tabs and Table Service UX and product design case study by senior product designer Parmis Meshgi.
@@ -23,7 +23,7 @@ Staff need one clear place to find a tab, understand its state, and take the nex
 
 [Read the case study ↓](https://meshgi.com/bar-tabs/#value)
 
-![Table Service concept showing live tables and service states](https://meshgi.com/assets/bar-tabs-floor.png)
+![Bar Tabs list design with table T4 selected and Quick View open](https://meshgi.com/assets/bar-tabs-list-quick-view.webp)
 
 My role Research and design lead
 
@@ -165,19 +165,37 @@ The first Bar Tabs release delivered the visualizer and core tab actions. Table 
 
 Product proof
 
-## The service model works from tab overview to floor planning.
+## Follow a table from the list into seat ordering.
 
-![Table Service concept with tables in several service states](https://meshgi.com/assets/bar-tabs-floor.png)
+These design screens show the list and ordering states. They document the design; they do not show a released Table Service screen.
 
-Live service
+### 01 · Find the table
 
-Each table shows ownership, timing, and payment state at a glance.
+![Bar Tabs list design with no table selected](https://meshgi.com/assets/bar-tabs-list-overview.webp)
 
-![Earlier floor-plan editor concept with object tools and table controls](https://meshgi.com/assets/floor-editor.png)
+List view: See the tables before choosing one.
 
-Earlier exploration
+![Bar Tabs list with table T4 selected and Quick View open](https://meshgi.com/assets/bar-tabs-list-quick-view.webp)
 
-This concept tested the authoring model before its placement changed.
+Quick View: Inspect T4 while the list stays visible.
+
+![Bar Tabs list with T4 seat details expanded](https://meshgi.com/assets/bar-tabs-list-seats.webp)
+
+Expanded seats: Open the table details before ordering.
+
+### 02 · Work with seats
+
+![Ordering design with new Seat 4 selected at table T4](https://meshgi.com/assets/bar-tabs-order-seat.webp)
+
+Select a seat: Keep the active seat visible beside the menu.
+
+![Ordering design with Seat 2 selected and one item shown](https://meshgi.com/assets/bar-tabs-order-item.webp)
+
+Review an item: Show the item under its seat before the next action.
+
+![Warning that Seat 2 has an item and must be emptied before removal](https://meshgi.com/assets/bar-tabs-order-guard.webp)
+
+Prevent item loss: Explain why the seat cannot be removed yet.
 
 Result
 

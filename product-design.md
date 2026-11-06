@@ -6,7 +6,7 @@ html_url: "https://meshgi.com/product-design/"
 author: "Parmis Meshgi"
 location: "Toronto, Canada"
 language: "en-CA"
-last_updated: "2026-11-04"
+last_updated: "2026-11-06"
 ---
 
 > Product design case studies by Toronto senior product designer Parmis Meshgi across Kiosk, Bar Tabs, Backoffice, and POS.
@@ -61,7 +61,7 @@ Open case study →](https://meshgi.com/kiosk/)
 
 [02 · Service
 
-![Bar Tabs service interface on a handheld point-of-sale terminal](https://meshgi.com/assets/bar-tabs-card-device.webp)
+![Bar Tabs list design with table T4 selected and Quick View open](https://meshgi.com/assets/bar-tabs-list-quick-view.webp)
 
 POS · Released and evolving
 

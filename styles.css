@@ -3376,7 +3376,12 @@ main#story .story h2::before {
 }
 
 .work-collage-bars img {
-  height: 90%;
+  width: 88%;
+  height: auto;
+  max-height: 86%;
+  border: 3px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 16px 30px rgba(20, 20, 20, 0.25);
   transform: translate(-50%, -50%) rotate(-1.5deg);
 }
 
@@ -4445,6 +4450,21 @@ main#story .story h2::before {
   background: var(--white);
 }
 
+.bar-tabs-proof-intro {
+  max-width: 65ch;
+  margin: 14px 0 0;
+  color: #514b43;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.bar-tabs-proof-group + .bar-tabs-proof-group { margin-top: 64px; }
+.bar-tabs-proof-group h3 { margin: 0 0 24px; font: 400 clamp(26px, 3vw, 36px)/1.2 var(--serif); }
+.bar-tabs-proof-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.bar-tabs-proof-grid img { aspect-ratio: 4 / 3; }
+.bar-tabs-proof-grid a { display: block; }
+.bar-tabs-proof-grid a:focus-visible { outline: 3px solid var(--case-accent); outline-offset: 5px; border-radius: 24px; }
+
 /* Interactive Kiosk prototype */
 
 .kiosk-demo-intro {
@@ -5255,7 +5275,7 @@ main#story .story h2::before {
   .value-hero-screen { width: 74%; }
   .value-screen-gallery { grid-template-columns: 1fr; }
   .value-screen-gallery .is-wide { grid-column: span 1; }
-  .work-proof-gallery.is-double { grid-template-columns: 1fr; }
+  .work-proof-gallery.is-double, .bar-tabs-proof-grid { grid-template-columns: 1fr; }
   .work-pos-hero-device { width: 96%; }
   .portfolio-history { padding-block: 78px; }
   .kiosk-demo-shell { margin-top: 36px; }
