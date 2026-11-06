@@ -73,7 +73,7 @@
       <div class="case-route-links">
         <a href="#value" aria-current="location">Project value</a>
         <a href="#decisions">Design decisions</a>
-        <a href="#product">Product proof</a>
+        <a href="#product">Design screens</a>
         <a href="#result">Result</a>
       </div>
       <span class="case-reading-progress" aria-hidden="true"><i></i></span>
@@ -86,13 +86,13 @@
         <ul>
           <li><span>✓</span><p>Make every open bill easy to find and understand.</p></li>
           <li><span>✓</span><p>Protect restricted actions without forcing staff to lose their place.</p></li>
-          <li><span>✓</span><p>Carry service status from tabs into a clear table view.</p></li>
+          <li><span>✓</span><p>Keep table and seat status clear in the list and ordering screens.</p></li>
         </ul>
       </div>
       <div class="value-problem-grid">
         <article><span>Problem</span><h3>Service changes by the second.</h3><p>Tabs move between staff, payment states, and service areas during the same shift.</p></article>
         <article><span>Risk</span><h3>Slow recovery affects guests.</h3><p>Unpaid tabs, unclear ownership, and restricted actions create delay and errors.</p></article>
-        <article><span>Direction</span><h3>Keep state and action together.</h3><p>One overview shows each bill, its owner, its status, and the actions available.</p></article>
+        <article><span>Direction</span><h3>Keep state and action together.</h3><p>The list keeps table status, order status, and the next action together.</p></article>
       </div>
     </section>
 
@@ -116,27 +116,29 @@
           <div class="value-detail"><p>Restricted access originally forced a logout. Manager approval now happens inside the active workflow.</p><div><strong>Intended impact</strong><p>Staff can recover without losing the tab or their place.</p></div></div>
         </details>
         <details>
-          <summary><span>05</span><h3>Extend the same model</h3><small>Table service</small></summary>
-          <div class="value-detail"><p>Table Service carries bills, seats, and service status into a floor view with defined recovery states.</p><div><strong>Intended impact</strong><p>The spatial view uses the same service rules instead of creating a separate system.</p></div></div>
+          <summary><span>05</span><h3>Cut the first scope</h3><small>Table Service</small></summary>
+          <div class="value-detail"><p>I asked for a smaller first release. The team chose a table list, one section, and a separate Table Service mode.</p><div><strong>Intended impact</strong><p>The team could test the basic table flow before adding floor planning.</p></div></div>
         </details>
       </div>
       <div class="case-decision-story" aria-labelledby="bars-decision-title">
         <div class="case-decision-story-head">
           <p class="section-label">How the work changed</p>
-          <h3 id="bars-decision-title">A service problem became a testable system.</h3>
-          <p>The research changed both the overview and a bill-splitting idea. I kept the tested design separate from released work.</p>
+          <h3 id="bars-decision-title">The team changed scope to build a smaller first release.</h3>
+          <p>Bar Tabs shipped first. Table Service began as a broad design, then moved to a smaller list-first plan.</p>
         </div>
         <ol class="case-decision-steps">
-          <li><span>01 · Learn</span><h4>Watch the shift</h4><p>I interviewed 15 waitstaff and managers, compared ten products, and worked behind a bar. The research exposed search, ownership, and bill-splitting problems.</p></li>
-          <li><span>02 · Change</span><h4>Make the action explicit</h4><p>An expert review flagged the learning cost of dragging items between bills. I changed the split design to select and assign items. This remains design work.</p></li>
-          <li><span>03 · Work together</span><h4>Connect design to stories</h4><p>I led the flows and sent 17 design links and a prototype to product. Another designer built the shared kit. Product, engineering, and quality assurance reviewed the release.</p></li>
-          <li><span>04 · Release</span><h4>Ship the first scope</h4><p>The first Bar Tabs release delivered the visualizer and core tab actions. Table Service and several later actions remain separate work.</p></li>
+          <li><span>01 · Learn · 2024</span><h4>Watch the shift</h4><p>I interviewed 15 staff, compared ten products, and worked behind a bar. I changed the bill-splitting design after expert feedback.</p></li>
+          <li><span>02 · Release · 2026</span><h4>Ship Bar Tabs</h4><p>I sent 17 design links and a prototype to product. Inaiá led the shared kit. Product, engineering, and quality assurance reviewed the release. The visualizer and core actions shipped in February 2026.</p></li>
+          <li><span>03 · Explore · Summer 2026</span><h4>Map Table Service</h4><p>I led a broad design case with table, seat, status, and recovery flows. The team explored a floor plan before the first scope was set.</p></li>
+          <li><span>04 · Reduce · October 2026</span><h4>Start with a list</h4><p>I asked for a small first release. The team voted for a table list, one section, and a Table Service mode. Floor planning moved later.</p></li>
+          <li><span>05 · Design together · October 2026</span><h4>Split the work</h4><p>I presented the list-view path and led the ordering screen. Inaiá owned the visualizer. Daily reviews settled the quick view, seat cards, and one expanded table at a time.</p></li>
+          <li><span>06 · Refine · November 2026</span><h4>Keep the guard clear</h4><p>A seat with items cannot be removed until staff clear them. Two seat-action variations are in one prototype for effort estimates and user review.</p></li>
         </ol>
       </div>
     </section>
 
     <section class="value-section value-product-section" id="product">
-      <header class="value-section-head"><p class="section-label">Product proof</p><h2>Follow a table from the list into seat ordering.</h2><p class="bar-tabs-proof-intro">These design screens show the list and ordering states. They document the design; they do not show a released Table Service screen.</p></header>
+      <header class="value-section-head"><p class="section-label">Design screens</p><h2>See the table list and seat-ordering decisions.</h2><p class="bar-tabs-proof-intro">These Table Service screens show the current list and ordering designs. Table Service remains in design.</p></header>
       <div class="bar-tabs-proof-group">
         <h3>01 · Find the table</h3>
         <div class="value-screen-gallery work-proof-gallery bar-tabs-proof-grid">
@@ -156,13 +158,13 @@
     </section>
 
     <section class="value-section" id="result">
-      <header class="value-section-head"><p class="section-label">Result</p><h2>Bar Tabs shipped, while Table Service remains a defined extension.</h2></header>
+      <header class="value-section-head"><p class="section-label">Result</p><h2>Bar Tabs shipped. Table Service is still being refined.</h2></header>
       <div class="value-result-grid">
         <article><span>Released</span><h3>Bar Tabs</h3><p>The first release supports single-server tabs and clear payment states.</p></article>
-        <article><span>Defined next</span><h3>Table Service</h3><p>The unshipped extension includes floor, seat, permission, offline, and conflict states.</p></article>
-        <article><span>Measure next</span><h3>Service signals</h3><p>Future measures include recall success, closing time, permission failures, and recovery completion.</p></article>
+        <article><span>In design</span><h3>Table Service</h3><p>The team is refining the list, seat ordering, and table actions. Floor planning is later work.</p></article>
+        <article><span>Check next</span><h3>Table workflows</h3><p>Team leads will estimate two seat-action variations. User reviews will test the connected flow.</p></article>
       </div>
-      <p class="case-result-note">The release is verified. Usage, adoption, and task-completion results have not been measured here.</p>
+      <p class="case-result-note">The Bar Tabs release is verified. Table Service design outcomes and task results have not been measured here.</p>
       <a class="value-final-action work-final-action" href="/product-design/"><span><small>Work index</small>See all product design work →</span></a>
     </section>
   </main>

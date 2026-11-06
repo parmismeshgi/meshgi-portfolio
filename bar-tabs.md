@@ -57,7 +57,7 @@ Protect restricted actions without forcing staff to lose their place.
 
 - ✓
 
-Carry service status from tabs into a clear table view.
+Keep table and seat status clear in the list and ordering screens.
 
 Problem
 
@@ -75,7 +75,7 @@ Direction
 
 ### Keep state and action together.
 
-One overview shows each bill, its owner, its status, and the actions available.
+The list keeps table status, order status, and the next action together.
 
 Design decisions
 
@@ -131,43 +131,51 @@ Staff can recover without losing the tab or their place.
 
 05
 
-### Extend the same model
+### Cut the first scope
 
-Table service
+Table Service
 
-Table Service carries bills, seats, and service status into a floor view with defined recovery states.
+I asked for a smaller first release. The team chose a table list, one section, and a separate Table Service mode.
 
 Intended impact
 
-The spatial view uses the same service rules instead of creating a separate system.
+The team could test the basic table flow before adding floor planning.
 
 How the work changed
 
-## A service problem became a testable system.
+## The team changed scope to build a smaller first release.
 
-The research changed both the overview and a bill-splitting idea. I kept the tested design separate from released work.
+Bar Tabs shipped first. Table Service began as a broad design, then moved to a smaller list-first plan.
 
-### 01 · Learn: Watch the shift
+### 01 · Learn · 2024: Watch the shift
 
-I interviewed 15 waitstaff and managers, compared ten products, and worked behind a bar. The research exposed search, ownership, and bill-splitting problems.
+I interviewed 15 staff, compared ten products, and worked behind a bar. I changed the bill-splitting design after expert feedback.
 
-### 02 · Change: Make the action explicit
+### 02 · Release · 2026: Ship Bar Tabs
 
-An expert review flagged the learning cost of dragging items between bills. I changed the split design to select and assign items. This remains design work.
+I sent 17 design links and a prototype to product. Inaiá led the shared kit. Product, engineering, and quality assurance reviewed the release. The visualizer and core actions shipped in February 2026.
 
-### 03 · Work together: Connect design to stories
+### 03 · Explore · Summer 2026: Map Table Service
 
-I led the flows and sent 17 design links and a prototype to product. Another designer built the shared kit. Product, engineering, and quality assurance reviewed the release.
+I led a broad design case with table, seat, status, and recovery flows. The team explored a floor plan before the first scope was set.
 
-### 04 · Release: Ship the first scope
+### 04 · Reduce · October 2026: Start with a list
 
-The first Bar Tabs release delivered the visualizer and core tab actions. Table Service and several later actions remain separate work.
+I asked for a small first release. The team voted for a table list, one section, and a Table Service mode. Floor planning moved later.
 
-Product proof
+### 05 · Design together · October 2026: Split the work
 
-## Follow a table from the list into seat ordering.
+I presented the list-view path and led the ordering screen. Inaiá owned the visualizer. Daily reviews settled the quick view, seat cards, and one expanded table at a time.
 
-These design screens show the list and ordering states. They document the design; they do not show a released Table Service screen.
+### 06 · Refine · November 2026: Keep the guard clear
+
+A seat with items cannot be removed until staff clear them. Two seat-action variations are in one prototype for effort estimates and user review.
+
+Design screens
+
+## See the table list and seat-ordering decisions.
+
+These Table Service screens show the current list and ordering designs. Table Service remains in design.
 
 ### 01 · Find the table
 
@@ -199,7 +207,7 @@ Prevent item loss: Explain why the seat cannot be removed yet.
 
 Result
 
-## Bar Tabs shipped, while Table Service remains a defined extension.
+## Bar Tabs shipped. Table Service is still being refined.
 
 Released
 
@@ -207,19 +215,19 @@ Released
 
 The first release supports single-server tabs and clear payment states.
 
-Defined next
+In design
 
 ### Table Service
 
-The unshipped extension includes floor, seat, permission, offline, and conflict states.
+The team is refining the list, seat ordering, and table actions. Floor planning is later work.
 
-Measure next
+Check next
 
-### Service signals
+### Table workflows
 
-Future measures include recall success, closing time, permission failures, and recovery completion.
+Team leads will estimate two seat-action variations. User reviews will test the connected flow.
 
-The release is verified. Usage, adoption, and task-completion results have not been measured here.
+The Bar Tabs release is verified. Table Service design outcomes and task results have not been measured here.
 
 [Work index See all product design work →](https://meshgi.com/product-design/)
 

@@ -67,7 +67,7 @@ POS · Released and evolving
 
 ### Bar Tabs
 
-Follow 15 staff interviews, a changed bill-splitting design, team handoff, and the first release.
+See how Bar Tabs shipped, then Table Service narrowed to a list-first design and seat ordering.
 
 Open case study →](https://meshgi.com/bar-tabs/)
 
