@@ -862,6 +862,10 @@ Design screens
 
 Six states show the table list and ordering screen. Table Service remains in design.
 
+[Play with Bar Tabs →](https://meshgi.com/bar-tabs/play/)
+
+[Play with Table Service →](https://meshgi.com/table-service/play/)
+
 ### 01 · Find the table
 
 ![Bar Tabs list design with no table selected](https://meshgi.com/assets/bar-tabs-list-overview.webp)
