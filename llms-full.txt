@@ -856,6 +856,40 @@ Direction
 
 The list keeps table status, order status, and the next action together.
 
+Design screens
+
+## See the table list and seat-ordering decisions.
+
+Six states show the table list and ordering screen. Table Service remains in design.
+
+### 01 · Find the table
+
+![Bar Tabs list design with no table selected](https://meshgi.com/assets/bar-tabs-list-overview.webp)
+
+List view
+
+![Bar Tabs list with table T4 selected and Quick View open](https://meshgi.com/assets/bar-tabs-list-quick-view.webp)
+
+Quick View
+
+![Bar Tabs list with T4 seat details expanded](https://meshgi.com/assets/bar-tabs-list-seats.webp)
+
+Expanded seats
+
+### 02 · Work with seats
+
+![Ordering design with new Seat 4 selected at table T4](https://meshgi.com/assets/bar-tabs-order-seat.webp)
+
+Select a seat
+
+![Ordering design with Seat 2 selected and one item shown](https://meshgi.com/assets/bar-tabs-order-item.webp)
+
+Review an item
+
+![Warning that Seat 2 has an item and must be emptied before removal](https://meshgi.com/assets/bar-tabs-order-guard.webp)
+
+Prevent item loss
+
 Design decisions
 
 ## Turn service research into visible rules for every tab.
@@ -922,67 +956,25 @@ The team could test the basic table flow before adding floor planning.
 
 How the work changed
 
-## The team changed scope to build a smaller first release.
+## From broad exploration to a smaller first scope.
 
-Bar Tabs shipped first. Table Service began as a broad design, then moved to a smaller list-first plan.
+Bar Tabs shipped first. The team then narrowed Table Service one decision at a time.
 
-### 01 · Learn · 2024: Watch the shift
+### 01 · Research and release: Build the Bar Tabs base
 
-I interviewed 15 staff, compared ten products, and worked behind a bar. I changed the bill-splitting design after expert feedback.
+I researched service work and led the first flows. A teammate led the shared kit. Product, engineering, and quality teams reviewed the February 2026 release.
 
-### 02 · Release · 2026: Ship Bar Tabs
+### 02 · Explore: Map Table Service
 
-I sent 17 design links and a prototype to product. Inaiá led the shared kit. Product, engineering, and quality assurance reviewed the release. The visualizer and core actions shipped in February 2026.
+The first design case covered floor planning, seats, table status, and recovery.
 
-### 03 · Explore · Summer 2026: Map Table Service
+### 03 · Reduce: Start with a list
 
-I led a broad design case with table, seat, status, and recovery flows. The team explored a floor plan before the first scope was set.
+I asked for a smaller first release. The team chose a table list and moved floor planning later.
 
-### 04 · Reduce · October 2026: Start with a list
+### 04 · Refine: Work through seat actions
 
-I asked for a small first release. The team voted for a table list, one section, and a Table Service mode. Floor planning moved later.
-
-### 05 · Design together · October 2026: Split the work
-
-I presented the list-view path and led the ordering screen. Inaiá owned the visualizer. Daily reviews settled the quick view, seat cards, and one expanded table at a time.
-
-### 06 · Refine · November 2026: Keep the guard clear
-
-A seat with items cannot be removed until staff clear them. Two seat-action variations are in one prototype for effort estimates and user review.
-
-Design screens
-
-## See the table list and seat-ordering decisions.
-
-These Table Service screens show the current list and ordering designs. Table Service remains in design.
-
-### 01 · Find the table
-
-![Bar Tabs list design with no table selected](https://meshgi.com/assets/bar-tabs-list-overview.webp)
-
-List view: See the tables before choosing one.
-
-![Bar Tabs list with table T4 selected and Quick View open](https://meshgi.com/assets/bar-tabs-list-quick-view.webp)
-
-Quick View: Inspect T4 while the list stays visible.
-
-![Bar Tabs list with T4 seat details expanded](https://meshgi.com/assets/bar-tabs-list-seats.webp)
-
-Expanded seats: Open the table details before ordering.
-
-### 02 · Work with seats
-
-![Ordering design with new Seat 4 selected at table T4](https://meshgi.com/assets/bar-tabs-order-seat.webp)
-
-Select a seat: Keep the active seat visible beside the menu.
-
-![Ordering design with Seat 2 selected and one item shown](https://meshgi.com/assets/bar-tabs-order-item.webp)
-
-Review an item: Show the item under its seat before the next action.
-
-![Warning that Seat 2 has an item and must be emptied before removal](https://meshgi.com/assets/bar-tabs-order-guard.webp)
-
-Prevent item loss: Explain why the seat cannot be removed yet.
+I led ordering while another designer led the visualizer. The design blocks removal of a seat with items. Two options await estimates and user review.
 
 Result
 
